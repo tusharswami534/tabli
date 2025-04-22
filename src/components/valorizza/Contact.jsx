@@ -53,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='bg-yellow'>
+    <div id='contatti' className='bg-yellow'>
       <div className=' pt-24 lg:pb-[340px] pb-[200px] relative max-w-[1920px] mx-auto'>
         <Heading headingText="Contatti" className="!text-center !pb-[38px] !leading-normal" />
         <div className='absolute bottom-[5%] lg:block hidden '>
