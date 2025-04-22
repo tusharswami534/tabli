@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Icons from './icons'
 import Link from 'next/link'
-import { NavList } from '@/utils/helper'
+import { NavList } from '../../utils/helper'
 
 const Nav = () => {
   const [open , setOpen] = useState(false)
