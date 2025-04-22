@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       >
         <Hero/>
         {children}
-        {/* <Footer/> */}
+        <Footer/>
       </body>
     </html>
   );
