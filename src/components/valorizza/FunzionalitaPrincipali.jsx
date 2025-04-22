@@ -4,7 +4,6 @@ const FunzionalitaPrincipali = () => {
   return (
     <div className='bg-yellow py-[160px] pt-[200px] relative'>
       <Image className='absolute top-[16%] h-[830px] w-full xl:block hidden' src="/assets/images/png/Funzionalità-layer.png" alt='top-layer' width={1920} height={152} />
-
       <div className="max-w-[1408px] mx-auto pb-10">
         <h2 className='font-black text-40 text-center pb-4 italic'>Funzionalità Principali</h2>
         <h5 className='font-black text-32 text-center italic'>Tutti gli strumenti di cui hai bisogno, in un’unica piattaforma.</h5>
@@ -49,5 +48,4 @@ const FunzionalitaPrincipali = () => {
     </div>
   )
 }
-
 export default FunzionalitaPrincipali
