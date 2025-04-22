@@ -1,10 +1,12 @@
 
 import VantaggiPerTe from "@/components/home/VantaggiPerTe";
 
-export default function Home() {
+const page = () => {
   return (
     <>
     <VantaggiPerTe/>
     </>
   );
 }
+
+export default page
