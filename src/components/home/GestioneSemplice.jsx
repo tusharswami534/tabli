@@ -5,7 +5,7 @@ import CustomButton from '../custom-ui/CustomButton'
 
 const GestioneSemplice = () => {
   return (
-    <div className="bg-dark-blue relative">
+    <div className="bg-dark-blue relative overflow-hidden">
       <Image className='w-full object-cover -translate-y-0.5' height={217} width={1920} src={'/assets/images/png/gestione-top-layer.png'} alt='top layer' />
       <div className='flex max-md:flex-col-reverse max-lg:gap-4  max-2xl:px-5 max-w-[1440px] mx-auto items-center justify-between pt-[110px] pb-[97px] '>
         <div className="">
