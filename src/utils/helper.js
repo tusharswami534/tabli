@@ -5,7 +5,7 @@ export const NavList = [
     } ,
     {
         title : 'Vantaggi',
-        link : '#vantaggi'
+        link : '/valorizza'
     } ,
     {
         title : 'Funzionalità',

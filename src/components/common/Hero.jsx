@@ -20,12 +20,12 @@ const Hero = () => {
         <div className='container max-w-[1600px] mx-auto'>
           <div className='flex items-center gap-5 max-lg:flex-col max-lg:gap-20 justify-between'>
             <div className='flex flex-col max-w-[726px]'>
-              <h1 style={{textShadow: '0px 8px 16px 0px #00000029'}} className='text-80 max-xl:text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-40 max-lg:text-center font-black italic text-white leading-131'>Tabli sta arrivando!</h1>
-              <Paragraph paragraphText={'Stiamo per rivoluzionare il modo in cui acquisti prodotti e servizi nei tuoi luoghi preferiti.'} className={'mb-2 max-lg:text-center'}/>
-              <Paragraph paragraphText={'Con Tabli, potrai consultare l’offerta, ordinare e pagare direttamente dal tuo smartphone, in totale autonomia e senza attese.'} className={'max-sm:hidden max-lg:text-center'}/>
+              <h1 style={{textShadow: '0px 8px 16px 0px #00000029'}} className={`text-80 max-xl:text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-40 max-lg:text-center font-black italic leading-131 ${path === '/' ? 'text-white' : 'text-dark-grey'  }`}>{path === '/' ? ' Tabli sta arrivando!' : 'Valorizza la tua attività con Tabli'}</h1>
+              <Paragraph paragraphText={path === '/' ? 'Stiamo per rivoluzionare il modo in cui acquisti prodotti e servizi nei tuoi luoghi preferiti.' : 'Tabli è progettato per supportare ogni tipo di attività locale - dal bar all’hotel, dal lido alla piccola bottega - offrendo uno strumento semplice, versatile e pronto all’uso.'} className={`mb-2 max-lg:text-center ${path !== '/' && '!text-dark-grey'}`}/>
+              <Paragraph paragraphText={path === '/' ? 'Con Tabli, potrai consultare l’offerta, ordinare e pagare direttamente dal tuo smartphone, in totale autonomia e senza attese.' : 'Permetti ai tuoi clienti di consultare i tuoi prodotti e servizi, ordinare o prenotare in autonomia, migliorando l’esperienza d’acquisto senza rivoluzionare la tua routine lavorativa.'} className={`max-sm:hidden max-lg:text-center ${path !== '/' && '!text-dark-grey'}`}/>
               <div className='flex gap-4 mt-10 max-sm:flex-col max-lg:items-center max-lg:justify-center'>
-                <CustomButton buttonName={'Come Funziona'} className={'max-w-[160px] leading-130 max-sm:max-w-[280px]  w-full'}/>
-                <CustomButton buttonName={'Contatti'} className={'max-w-[160px] leading-130  max-sm:max-w-[280px] w-full !text-dark-blue !bg-white'}/>
+                <CustomButton buttonName={'Come Funziona'} className={`max-w-[160px] leading-130 max-sm:max-w-[280px] w-full ${path !== '/' && '!text-white !bg-dark-blue'}`}/>
+                <CustomButton buttonName={'Contatti'} className={'max-w-[160px] leading-130 max-sm:max-w-[280px] w-full !text-dark-blue !bg-white'}/>
               </div>  
             </div>
             <div className='gap-2.5 flex items-center'>
