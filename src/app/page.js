@@ -1,10 +1,10 @@
+import Hero from "@/components/common/Hero";
 import VantaggiPerTe from "@/components/home/VantaggiPerTe";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <VantaggiPerTe />
+      <Hero/>
     </>
   );
 }
