@@ -1,12 +1,12 @@
 "use client";
-import React, { useRef, useState } from 'react';
+import React, {  useState } from 'react';
 import Heading from '../custom-ui/Heading';
 import InputField from '../custom-ui/InputField';
 import CustomButton from '../custom-ui/CustomButton';
 import Swal from 'sweetalert2';
 
 const Contact = () => {
-  const formRef = useRef();
+
   const [formData, setFormData] = useState({ nome: '', cognome: '', telefono: '', email: '', messaggio: '' });
   const [errors, setErrors] = useState({ nome: '', cognome: '', telefono: '', email: '', messaggio: '' });
   const phoneRegex = /^[0-9]{10,15}$/;
@@ -60,7 +60,7 @@ const Contact = () => {
     <div className='bg-yellow pt-24 lg:pb-[340px] pb-[200px]'>
       <div className="container mx-auto px-4 max-w-[760px]">
         <Heading headingText="Contatti" className="!text-center !pb-[38px] !leading-normal" />
-        <form ref={formRef} onSubmit={handleSubmit} className="rounded-lg w-full max-w-3xl">
+        <form  onSubmit={handleSubmit} className="rounded-lg w-full max-w-3xl">
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <InputField label="Nome" name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} />
