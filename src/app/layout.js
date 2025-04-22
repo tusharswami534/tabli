@@ -1,6 +1,6 @@
 import Hero from "../components/common/Hero";
 import "./globals.css";
-import Footer from "@/components/common/Footer";
+import Footer from "../components/common/Footer";
 
 
 export const metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       >
         <Hero/>
         {children}
-        <Footer/>
+        {/* <Footer/> */}
       </body>
     </html>
   );
