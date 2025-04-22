@@ -1,5 +1,6 @@
 "use client";
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
 import Heading from '../custom-ui/Heading';
 import InputField from '../custom-ui/InputField';
 import CustomButton from '../custom-ui/CustomButton';
@@ -22,7 +23,7 @@ const Contact = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    let formErrors = { nome: '', cognome: '', telefono: '', email: '', messaggio: ''};
+    let formErrors = { nome: '', cognome: '', telefono: '', email: '', messaggio: '' };
     let isValid = true;
     if (formData.nome.trim() === '') {
       formErrors.nome = 'Enter FirstName.';
@@ -52,15 +53,18 @@ const Contact = () => {
       icon: 'success',
       confirmButtonText: 'OK',
     });
-    setFormData({ nome: '', cognome: '', telefono: '',  email: '', messaggio: ''});
+    setFormData({ nome: '', cognome: '', telefono: '', email: '', messaggio: '' });
     console.log('Form submitted:', formData);
   };
 
   return (
-    <div className='bg-yellow pt-24 lg:pb-[340px] pb-[200px]'>
+    <div className='bg-yellow pt-24 lg:pb-[340px] pb-[200px] relative'>
+      <Heading headingText="Contatti" className="!text-center !pb-[38px] !leading-normal" />
+      <div className='absolute bottom-[5%] md:block hidden'>
+        <Image src="/assets/images/png/contact-outline.png" alt='contact-outline' width={1920} height={1080} className='h-full' />
+      </div>
       <div className="container mx-auto px-4 max-w-[760px]">
-        <Heading headingText="Contatti" className="!text-center !pb-[38px] !leading-normal" />
-        <form  onSubmit={handleSubmit} className="rounded-lg w-full max-w-3xl">
+        <form onSubmit={handleSubmit} className="rounded-lg w-full max-w-3xl relative z-10">
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <InputField label="Nome" name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} />
