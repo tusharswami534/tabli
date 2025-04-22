@@ -1,46 +1,73 @@
 @import "tailwindcss";
 
 @theme {
-    /* Color */
-    --color-yellow: #ffdc64;
-    --color-dark-blue: #136f77;
-    --color-light-blue: #2b7d85;
-    --color-dark-grey: #363B3C;
+  /* Color */
+  --color-yellow: #ffdc64;
+  --color-dark-blue: #136f77;
+  --color-light-blue: #2b7d85;
+  --color-dark-grey: #363B3C;
+  --color-gray: #86898A;
 
-    /* Font Size  */
-    
-    --text-26: 26px;
-    --text-32: 32px;
-    --text-40: 40px;
-    --text-80: 80px;
+  /* Font Size  */
 
-    /* Shadow */
-    
-    --shadow-common-button: 2px 4px 0px 0px #00000029;
+  --text-26: 26px;
+  --text-32: 32px;
+  --text-40: 40px;
+  --text-80: 80px;
 
-    /* Line Height */
-    --spacing-130: 130%;
-    --spacing-131: 131%;   
+  /* Shadow */
+
+  --shadow-common-button: 2px 4px 0px 0px #00000029;
+
+  /* Line Height */
+  --spacing-100: 100%;
+  --spacing-130: 130%;
+  --spacing-131: 131%;
 }
 
 @font-face {
-    font-family: cooper hewitt;
-    src: url('../../public/assets/fonts/CooperHewitt-Heavy.otf');
-    font-weight: 900;
+  font-family: cooper hewitt;
+  src: url('../../public/assets/fonts/CooperHewitt-Heavy.otf');
+  font-weight: 900;
 }
 
 @font-face {
-    font-family: cooper hewitt;
-    src: url('../../public/assets/fonts/CooperHewitt-Bold.otf');
-    font-weight: 700;
+  font-family: cooper hewitt;
+  src: url('../../public/assets/fonts/CooperHewitt-Bold.otf');
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: cooper hewitt;
-    src: url('../../public/assets/fonts/CooperHewitt-Medium.otf');
-    font-weight: 500;
+  font-family: cooper hewitt;
+  src: url('../../public/assets/fonts/CooperHewitt-Medium.otf');
+  font-weight: 500;
 }
 
-*{
-    font-family: cooper hewitt , sans-serif;
+* {
+  font-family: cooper hewitt, sans-serif;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  z-index: 50;
+}
+
+.swiper-pagination-bullet {
+  background: #363B3C !important; 
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 !important;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 75px !important;
+  border-radius: 20px !important;
+  background: #246E6D !important; /* teal blue */
 }
