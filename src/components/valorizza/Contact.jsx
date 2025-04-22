@@ -5,83 +5,46 @@ import InputField from '../custom-ui/InputField';
 import CustomButton from '../custom-ui/CustomButton';
 import Swal from 'sweetalert2';
 
-
 const Contact = () => {
   const formRef = useRef();
-
-  const [formData, setFormData] = useState({
-    nome: '',
-    cognome: '',
-    telefono: '',
-    email: '',
-    messaggio: ''
-  });
-
-  const [errors, setErrors] = useState({
-    nome: '',
-    cognome: '',
-    telefono: '',
-    email: '',
-    messaggio: ''
-  });
-
+  const [formData, setFormData] = useState({ nome: '', cognome: '', telefono: '', email: '', messaggio: '' });
+  const [errors, setErrors] = useState({ nome: '', cognome: '', telefono: '', email: '', messaggio: '' });
   const phoneRegex = /^[0-9]{10,15}$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setFormData((prev) => ({
-      ...prev,
-      [name]: value
+      ...prev, [name]: value
     }));
-
     setErrors((prev) => ({
-      ...prev,
-      [name]: '' // clear the error as soon as user types
+      ...prev, [name]: ''
     }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    let formErrors = {
-      nome: '',
-      cognome: '',
-      telefono: '',
-      email: '',
-      messaggio: ''
-    };
-
+    let formErrors = { nome: '', cognome: '', telefono: '', email: '', messaggio: ''};
     let isValid = true;
-
     if (formData.nome.trim() === '') {
       formErrors.nome = 'Enter FirstName.';
       isValid = false;
     }
-
     if (formData.cognome.trim() === '') {
       formErrors.cognome = 'Enter LastName. ';
       isValid = false;
     }
-
     if (!phoneRegex.test(formData.telefono.trim())) {
       formErrors.telefono = 'Add a valid number of 10 letters.';
       isValid = false;
     }
-
     if (!emailRegex.test(formData.email.trim())) {
       formErrors.email = 'Add a valid email .';
       isValid = false;
     }
-
     if (formData.messaggio.trim() === '') {
       formErrors.messaggio = 'Add a fine description about concern.';
       isValid = false;
     }
-
     setErrors(formErrors);
-
     if (!isValid) return;
     Swal.fire({
       title: 'Success!',
@@ -89,14 +52,7 @@ const Contact = () => {
       icon: 'success',
       confirmButtonText: 'OK',
     });
-
-    setFormData({
-      nome: '',
-      cognome: '',
-      telefono: '',
-      email: '',
-      messaggio: ''
-    });
+    setFormData({ nome: '', cognome: '', telefono: '',  email: '', messaggio: ''});
     console.log('Form submitted:', formData);
   };
 
@@ -107,76 +63,36 @@ const Contact = () => {
         <form ref={formRef} onSubmit={handleSubmit} className="rounded-lg w-full max-w-3xl">
           <div className="grid md:grid-cols-2 gap-10">
             <div>
-              <InputField
-                label="Nome"
-                name="nome"
-                placeholder="Nome"
-                value={formData.nome}
-                onChange={handleChange}
-              />
-              {errors.nome && <p className="text-red-600 text-sm mt-1">{errors.nome}</p>}
+              <InputField label="Nome" name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} />
+              {errors.nome && <p className="text-red-600 text-sm mt-2">{errors.nome}</p>}
             </div>
             <div>
-              <InputField
-                label="Cognome"
-                name="cognome"
-                placeholder="Cognome"
-                value={formData.cognome}
-                onChange={handleChange}
-              />
-              {errors.cognome && <p className="text-red-600 text-sm mt-1">{errors.cognome}</p>}
+              <InputField label="Cognome" name="cognome" placeholder="Cognome" value={formData.cognome} onChange={handleChange} />
+              {errors.cognome && <p className="text-red-600 text-sm mt-2">{errors.cognome}</p>}
             </div>
             <div>
-              <InputField
-                label="Telefono"
-                name="telefono"
-                type="tel"
-                placeholder="Telefono"
-                value={formData.telefono}
-                onChange={handleChange}
-              />
-              {errors.telefono && <p className="text-red-600 text-sm mt-1">{errors.telefono}</p>}
+              <InputField label="Telefono" name="telefono" type="tel" placeholder="Telefono" value={formData.telefono}
+                onChange={handleChange} />
+              {errors.telefono && <p className="text-red-600 text-sm mt-2">{errors.telefono}</p>}
             </div>
             <div>
-              <InputField
-                label="Email"
-                name="email"
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
+              <InputField label="Email" name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+              {errors.email && <p className="text-red-600 text-sm mt-2">{errors.email}</p>}
             </div>
           </div>
-
           <div className="mt-10">
             <label htmlFor="messaggio" className="block font-bold mb-2">
               Messaggio
             </label>
-            <textarea
-              id="messaggio"
-              name="messaggio"
-              rows={5}
-              placeholder="Messaggio"
-              className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button bg-white"
-              value={formData.messaggio}
-              onChange={handleChange}
-            />
+            <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button bg-white" value={formData.messaggio} onChange={handleChange} />
             {errors.messaggio && <p className="text-red-600 text-sm mt-1">{errors.messaggio}</p>}
           </div>
-
           <div className="flex justify-center mt-10">
-            <CustomButton
-              buttonName="INVIA MESSAGGIO"
-              myClass="!text-white !bg-dark-blue !w-[169px] !h-[45px] cursor-pointer border-2 border-dark-blue hover:!bg-yellow !whitespace-nowrap flex justify-center items-center hover:!text-black transition-all duration-500 ease-linear"
-              type="submit"
-            />
+            <CustomButton type="submit" buttonName="INVIA MESSAGGIO" myClass="!text-white !bg-dark-blue !w-[169px] !h-[45px] cursor-pointer border-2 border-dark-blue hover:!bg-yellow !whitespace-nowrap flex justify-center items-center hover:!text-black transition-all duration-500 ease-linear" />
           </div>
         </form>
       </div>
     </div>
   );
 };
-
 export default Contact;
