@@ -6,9 +6,40 @@
   --color-light-blue: #2b7d85;
   --color-gray: #363B3C;
 
-  --text-26: 26px;
-  --text-32: 32px;
-  --text-40: 40px;
-  --text-80: 80px;
+    /* Font Size  */
+    
+    --text-26: 26px;
+    --text-32: 32px;
+    --text-40: 40px;
+    --text-80: 80px;
 
+    /* Shadow */
+    
+    --shadow-common-button: 2px 4px 0px 0px #00000029;
+
+    /* Line Height */
+    --spacing-130: 130%;
+    --spacing-131: 131%;   
+}
+
+@font-face {
+    font-family: cooper hewitt;
+    src: url('../../public/assets/fonts/CooperHewitt-Heavy.otf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: cooper hewitt;
+    src: url('../../public/assets/fonts/CooperHewitt-Bold.otf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: cooper hewitt;
+    src: url('../../public/assets/fonts/CooperHewitt-Medium.otf');
+    font-weight: 500;
+}
+
+*{
+    font-family: cooper hewitt , sans-serif;
 }

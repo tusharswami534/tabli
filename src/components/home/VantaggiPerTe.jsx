@@ -1,8 +1,9 @@
 import React from 'react'
-
+import CustomButton from '../custom-ui/CustomButton'
 const VantaggiPerTe = () => {
   return (
-    <div>VantaggiPerTe</div>
+    <div>
+    </div>
   )
 }
 
