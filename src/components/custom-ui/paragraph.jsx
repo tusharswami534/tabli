@@ -1,9 +1,9 @@
 import React from 'react'
 
-const paragraph = () => {
+const Paragraph = ({ paragraphText, className }) => {
   return (
-    <div>paragraph</div>
+    <p className={`text-white font-medium text-base leading-100 ${className} `}>{paragraphText}</p>
   )
 }
 
-export default paragraph
+export default Paragraph
