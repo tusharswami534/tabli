@@ -13,7 +13,7 @@ const VantaggiPerTe = () => {
   return (
     <div>
       <Image className='w-full object-cover' height={217} width={1920} src={'/assets/images/png/benefits-top-layer.png'} alt='top layer' />
-      <div className="bg-yellow translate-y-[-1px] pb-[180px]">
+      <div className="bg-yellow translate-y-[-1px] pb-14 md:pb-[180px]">
         <div className="md:py-10 py-6">
           <Heading className='text-center' headingText='Vantaggi per Te' />
         </div>
