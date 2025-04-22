@@ -2,12 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 const FunzionalitaPrincipali = () => {
   return (
-    <div className='bg-[#FFDC64] py-[160px] relative'>
-      <Image className='absolute top-[4%] h-[830px] w-full' src="/assets/images/png/Funzionalità-layer.png" alt='top-layer' width={1920} height={152} />
-
+    <div className='bg-yellow py-[160px] pt-[200px] relative'>
+      <Image className='absolute top-[16%] h-[830px] w-full xl:block hidden' src="/assets/images/png/Funzionalità-layer.png" alt='top-layer' width={1920} height={152} />
       <div className="max-w-[1408px] mx-auto pb-10">
-        <h2 className='font-black text-[40px] text-center pb-4'>Funzionalità Principali</h2>
-        <h5 className='font-black text-[32px] text-center'>Tutti gli strumenti di cui hai bisogno, in un’unica piattaforma.</h5>
+        <h2 className='font-black text-40 text-center pb-4 italic'>Funzionalità Principali</h2>
+        <h5 className='font-black text-32 text-center italic'>Tutti gli strumenti di cui hai bisogno, in un’unica piattaforma.</h5>
         <div className="flex flex-wrap justify-center pt-20 gap-[27px]">
           <div className='rounded-[20px] bg-white p-6 relative'>
             <Image className='absolute -left-[8%] -top-[16%]' src="/assets/images/png/menu.png" alt='menu' width={160} height={160} />
@@ -49,5 +48,4 @@ const FunzionalitaPrincipali = () => {
     </div>
   )
 }
-
 export default FunzionalitaPrincipali
