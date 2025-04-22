@@ -3,11 +3,12 @@ import React from 'react'
 import Image from 'next/image'
 import Heading from '../custom-ui/Heading'
 import Paragraph from '../custom-ui/Paragraph'
-import { BENEFITS_LIST } from '@/utils/helper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import { BENEFITS_LIST } from '../../utils/helper'
+
 const VantaggiPerTe = () => {
   return (
     <div>

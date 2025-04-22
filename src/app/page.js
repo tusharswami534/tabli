@@ -1,12 +1,12 @@
-
-import VantaggiPerTe from "@/components/home/VantaggiPerTe";
+import React from 'react'
+import VantaggiPerTe from '../components/home/VantaggiPerTe'
 
 const page = () => {
   return (
     <>
-    <VantaggiPerTe/>
+      <VantaggiPerTe/>
     </>
-  );
+  )
 }
 
 export default page
