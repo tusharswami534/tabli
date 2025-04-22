@@ -1,12 +1,14 @@
-import VantaggiPerTe from "@/components/home/VantaggiPerTe";
-import VantaggiAttività from "../components/valorizza/VantaggiAttività";
-import Image from "next/image";
+import React from 'react'
+import VantaggiAttività from '../components/valorizza/VantaggiAttività'
+import VantaggiPerTe from '../components/home/VantaggiPerTe'
 
-export default function Home() {
+const page = () => {
   return (
-    <>
-      <VantaggiPerTe />
+    <div>
       <VantaggiAttività />
-    </>
-  );
+      <VantaggiPerTe/>
+    </div>
+  )
 }
+
+export default page
