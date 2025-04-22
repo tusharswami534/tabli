@@ -3,8 +3,8 @@ import Image from 'next/image'
 const VantaggiAttività = () => {
   return (
       <div className='bg-[#136F77] relative'>
-          <Image className='absolute top-0' src="/assets/images/png/attivita-top-layer.png" alt='top-layer' width={1920} height={152} />
-          <Image className='absolute -bottom-0' src="/assets/images/png/attivita-bottom-layer.png" alt='bottom-layer' width={1920} height={152} />
+          <Image className='absolute -top-[10%] h-[152px] w-full' src="/assets/images/png/attivita-top-layer.png" alt='top-layer' width={1920} height={152} />
+          <Image className='absolute lg:-bottom-[18%] md:-bottom-[15%] -bottom-[10%] w-full md:h-[152px] h-[130px]' src="/assets/images/png/attivita-bottom-layer.png" alt='bottom-layer' width={1920} height={152} />
           <div className="max-w-[1408px] mx-auto px-4">
               <h2 className='text-[#FFDC64] text-center text-[40px] font-black'>
                   Vantggi per le tau Attivita
