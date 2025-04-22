@@ -60,3 +60,55 @@ export const BENEFITS_LIST = [
     }
    
 ]
+
+export const COSA_POTRAI_DATA_LIST = [
+    {
+      img: "public/icon.png",
+      title: "Scopri cosa offre ogni attività",
+    },
+    {
+      img: "public/icon.png",
+      title: "Ordina in autonomia, con calma",
+    },
+    {
+      img: "public/icon.png",
+      title: "Paga direttamente dall’app",
+    },
+    {
+      img: "public/icon.png",
+      title: "Ricevi aggiornamenti in tempo reale",
+    },
+    {
+      img: "public/icon.png",
+      title: "Salva le attività preferite",
+    },
+    {
+      img: "public/icon.png",
+      title: "Vivi un’esperienza semplice e veloce",
+    },
+  ];
+  export const COME_FUNZIONA_DATA_LIST = [
+    {
+      img: "public/come.png",
+      title: "Crea il tuo spazio su Tabli",
+      description:
+        "Inserisci le informazioni essenziali della tua attività e personalizza l’esperienza in pochi passaggi.",
+    },
+    {
+      img: "public/come.png",
+      title: "Aggiungi prodotti o servizi",
+      description:
+        "Organizza la tua offerta con immagini, descrizioni e prezzi. Tabli è flessibile e adatto a qualsiasi.",
+    },
+    {
+      img: "public/come.png",
+      title: "Condividi il link o il QR code",
+      description:
+        "Stampalo o invialo ai tuoi clienti: potranno visualizzare tutto direttamente dal loro smartphone.",
+    },
+    {
+      img: "public/come.png",
+      title: "Ricevi ordini e prenotazioni",
+      description:"Semplifica le interazioni con i clienti, ottimizza i tempi e offri un servizio moderno, chiaro e senza errori.",
+    },
+  ];
