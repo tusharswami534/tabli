@@ -1,11 +1,20 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Icons from './icons'
 import Link from 'next/link'
 import { NavList } from '@/utils/helper'
 
 const Nav = () => {
   const [open , setOpen] = useState(false)
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+  }, [open])
+
   return (
     <div className='w-full pt-10'>
         <div className='container max-w-[1600px] mx-auto'>
@@ -15,7 +24,7 @@ const Nav = () => {
             </Link>
             <div className={`flex items-center max-md:fixed max-md:w-full max-md:h-full max-md:justify-center max-md:top-0 max-md:bg-dark-blue max-md:flex-col max-md:z-10 max-md:transition-all max-md:duration-300 gap-6 ${open ? 'left-0' : 'left-full'}`}>
                 {NavList.map((item, index) => (
-                  <Link className='font-black italic hover:text-yellow transition-all duration-300 max-md:text-xl text-white leading-131' href={item.link} key={index}>
+                  <Link onClick={() => setOpen(false)} className='font-black italic hover:text-yellow transition-all duration-300 max-md:text-xl text-white leading-131' href={item.link} key={index}>
                     {item.title}
                   </Link>
                 ))}
