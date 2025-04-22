@@ -13,7 +13,7 @@ const VantaggiPerTe = () => {
   return (
     <div>
       <Image className='w-full object-cover' height={217} width={1920} src={'/assets/images/png/benefits-top-layer.png'} alt='top layer' />
-      <div className="bg-yellow translate-y-[-1px] pb-[180px]">
+      <div className="bg-yellow translate-y-[-1px] pb-14 md:pb-[180px]">
         <div className="md:py-10 py-6">
           <Heading className='text-center' headingText='Vantaggi per Te' />
         </div>
@@ -25,8 +25,8 @@ const VantaggiPerTe = () => {
                 <div className="flex flex-col py-6 px-4 gap-2">
                   <p className='text-dark-blue font-bold leading-100 text-xl text-center'>{item.title}</p>
                   <div className="h-0 overflow-hidden group-hover:h-[176px] transition-all duration-300 flex flex-col gap-2">
-                    <Paragraph className='!text-gray !leading-[130%]' paragraphText={item.description} />
-                    <Paragraph className='!text-gray !leading-[130%]' paragraphText={item.descriptionTwo} />
+                    <Paragraph className='!text-light-gray !leading-[130%]' paragraphText={item.description} />
+                    <Paragraph className='!text-light-gray !leading-[130%]' paragraphText={item.descriptionTwo} />
                   </div>
                 </div>
               </div>
@@ -62,7 +62,7 @@ const VantaggiPerTe = () => {
                 <Image className='w-[300px] max-md:h-[300px]' height={300} width={240} src={item.image} alt='benefits' />
                 <div className="flex flex-col py-6 px-4 gap-2">
                   <p className='text-dark-blue font-bold leading-100 text-xl'>{item.title}</p>
-                  <Paragraph className='!text-gray !leading-[130%]' paragraphText={item.description} />
+                  <Paragraph className='!text-light-gray !leading-[130%]' paragraphText={item.description} />
                 </div>
               </SwiperSlide>
             ))}
