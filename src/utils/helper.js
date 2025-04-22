@@ -57,6 +57,6 @@ export const BENEFITS_LIST = [
         title:"Assistenza Immediata",
         description:"Evita code o tempi morti: fai tutto in autonomia, direttamente dal tuo smartphone.",
         descriptionTwo:"Con Tabli, i tuoi clienti avranno un’esperienza più fluida e piacevole, mentre tu potrai concentrarti su ciò che conta davvero: offrire un servizio di qualità."
-    },
+    }
    
 ]
