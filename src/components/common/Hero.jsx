@@ -17,11 +17,11 @@ const Hero = () => {
   const path = usePathname()
   return (
     <div className={` pb-[72px] max-md:pb-0 relative overflow-hidden ${path === '/' ? 'bg-dark-blue' : '!bg-yellow'}`}>
+      <Nav />
+      <div className='flex w-full relative py-[62px] max-md:pt-20 max-md:pb-0'>
       <Link className='absolute max-md:hidden bottom-4 left-1/2 -translate-x-1/2' href={'#come-funziona'}>
         <Icons icon='downArrow' />
       </Link>
-      <Nav />
-      <div className='flex w-full py-[62px] max-md:pt-20 max-md:pb-0'>
         <div className='container lg:px-4 max-w-[1632px] mx-auto'>
           <div className='flex items-center gap-5 max-lg:gap-0 max-lg:flex-col justify-between'>
             <div className='flex flex-col max-w-[726px] max-lg:px-4 w-full lg:w-6/12'>
