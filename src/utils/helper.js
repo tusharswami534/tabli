@@ -157,3 +157,36 @@ export const CONTENT_LIST = [
       "Con Tabli, ogni parte del processo è pensata per facilitare il tuo lavoro, rendendolo più efficiente e produttivo. Il nostro obiettivo è che tu possa concentrarti su ciò che è più importante: gestire la tua attività al meglio, mentre noi ci occupiamo della parte tecnologica.",
   },
 ]
+export const FEATURES_LIST = [
+  {
+    icon: '/assets/images/png/menu.png',
+    title: 'Menù digitale personalizzabile',
+    description: 'Crea e aggiorna in autonomia la tua offerta, sia essa di prodotti, servizi o esperienze.',
+    imgStyle: 'absolute -left-[8%] -top-[16%]'
+  },
+  {
+    icon: '/assets/images/png/Funzionalità-system.png',
+    title: 'Sistema di ordinazione e gestione diretta',
+    description: 'I clienti scelgono e ordinano dal proprio smartphone, senza attese o intermediari.',
+    imgStyle: 'absolute -left-[6%] -top-[19%]'
+  },
+  {
+    icon: '/assets/images/png/Funzionalità-data.png',
+    title: 'Visualizzazione i dati in tempo reale',
+    description: 'Ricevi, organizza e monitora tutte le richieste in modo semplice e centralizzato.',
+    imgStyle: 'absolute -left-[8%] -top-[16%]'
+  },
+  {
+    icon: '/assets/images/png/Funzionalità-scanner.png',
+    title: 'Accesso all’offerta tramite QR Code',
+    description: 'Ogni tavolo o punto vendita ha il proprio codice: facile da stampare, pronto all’uso.',
+    imgStyle: 'absolute -left-[8%] -top-[16%]'
+  },
+  {
+    icon: '/assets/images/png/Funzionalità-analize.png',
+    title: 'Analisi, raccolta e visualizzazione dati',
+    description: 'Tieni sotto controllo volumi, preferenze e andamento dell’attività, in modo chiaro.',
+    imgStyle: 'absolute -left-[8%] -top-[18%]'
+  }
+]
+
