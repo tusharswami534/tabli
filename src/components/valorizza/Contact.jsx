@@ -27,19 +27,24 @@ const Contact = () => {
     let isValid = true;
     if (formData.nome.trim() === '') {
       formErrors.nome = 'Enter FirstName.';
-      isValid = false; }
+      isValid = false;
+    }
     if (formData.cognome.trim() === '') {
       formErrors.cognome = 'Enter LastName. ';
-      isValid = false; }
+      isValid = false;
+    }
     if (!phoneRegex.test(formData.telefono.trim())) {
       formErrors.telefono = 'Add a valid number of 10 letters.';
-      isValid = false; }
+      isValid = false;
+    }
     if (!emailRegex.test(formData.email.trim())) {
       formErrors.email = 'Add a valid email .';
-      isValid = false; }
+      isValid = false;
+    }
     if (formData.messaggio.trim() === '') {
       formErrors.messaggio = 'Add a fine description about concern.';
-      isValid = false; }
+      isValid = false;
+    }
     setErrors(formErrors);
     if (!isValid) return;
     Swal.fire({
@@ -54,7 +59,7 @@ const Contact = () => {
 
   return (
     <div id='contatti' className='bg-yellow'>
-      <div className=' pt-24 lg:pb-[340px] pb-[200px] relative max-w-[1920px] mx-auto'>
+      <div className=' pt-[200px] lg:pb-[340px] pb-[200px] relative max-w-[1920px] mx-auto'>
         <Heading headingText="Contatti" className="!text-center !pb-[38px] !leading-normal" />
         <div className='absolute bottom-[5%] lg:block hidden '>
           <Image src="/assets/images/png/contact-outline.png" alt='contact-outline' width={1920} height={1080} className='lg:h-[870px]' />
@@ -86,12 +91,12 @@ const Contact = () => {
               {errors.messaggio && <p className="text-red-600 text-sm mt-1">{errors.messaggio}</p>}
             </div>
             <div className="flex justify-center mt-10">
-              <CustomButton type="submit" buttonName="INVIA MESSAGGIO" myClass="!text-white !bg-dark-blue !w-[169px] !h-[45px] cursor-pointer border-2 border-dark-blue hover:!bg-yellow !whitespace-nowrap flex justify-center items-center hover:!text-black transition-all duration-500 ease-linear" />
+              <CustomButton type="submit" buttonName="INVIA MESSAGGIO" className="!text-white !bg-dark-blue !w-[169px] !h-[45px] cursor-pointer border-2 border-dark-blue hover:!bg-yellow !whitespace-nowrap flex justify-center items-center hover:!text-black transition-all duration-500 ease-linear" />
             </div>
           </form>
         </div>
       </div>
-   </div>
+    </div>
   );
 };
 export default Contact;
