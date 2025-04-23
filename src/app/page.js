@@ -2,6 +2,7 @@ import React from 'react'
 import VantaggiPerTe from '../components/home/VantaggiPerTe'
 import GestioneSemplice from '../components/home/GestioneSemplice'
 import MaggioriInformazioni from '../components/home/MaggioriInformazioni'
+import RastaTabli from 'src/components/home/RastaTabli'
 
 const page = () => {
   return (
@@ -9,6 +10,7 @@ const page = () => {
       <VantaggiPerTe />
       <GestioneSemplice />
       <MaggioriInformazioni />
+      <RastaTabli/>
     </>
   )
 }

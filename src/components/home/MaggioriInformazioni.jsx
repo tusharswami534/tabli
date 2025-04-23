@@ -22,7 +22,7 @@ const MaggioriInformazioni = () => {
           </div>
         </div>
       </div>
-      <Image className='w-full max-sm:h-[73px] -translate-y-0.5' height={136} width={1920} src={'/assets/images/png/more-info-bottom-layer.png'} alt='bottom layer' />
+      <Image className='w-full max-sm:h-[73px] -translate-y-0.5 relative z-10' height={136} width={1920} src={'/assets/images/png/more-info-bottom-layer.png'} alt='bottom layer' />
     </>
   )
 }
