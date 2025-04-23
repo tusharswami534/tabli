@@ -48,7 +48,7 @@ const RastaTabli = () => {
                         { label: 'Ore', value: timeLeft.hours },
                         { label: 'Minuti', value: timeLeft.minutes },
                         ].map(({ label, value }) => (
-                            <div key={label} className="bg-light-blue rounded-lg px-6 py-6 sm:!w-[218px] sm:h-[180px] w-[109px] h-[128px] justify-center shadow-md flex flex-col items-center">
+                            <div key={label} className="bg-light-blue rounded-lg px-6 py    -6 sm:!w-[218px] sm:h-[180px] w-[109px] h-[128px] justify-center shadow-md flex flex-col items-center">
                                 <span className="text-yellow md:text-80 text-40 font-extrabold leading-normal">{value}</span>
                                 <span className="text-xl mt-1">{label}</span>
                             </div>

@@ -1,3 +1,4 @@
+import BackToTop from "src/components/common/BackToTop";
 import Footer from "../components/common/Footer";
 import Hero from "../components/common/Hero";
 import "./globals.css";
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <Hero/>
         {children}
         <Footer/>
+        <BackToTop/>
       </body>
     </html>
   );
