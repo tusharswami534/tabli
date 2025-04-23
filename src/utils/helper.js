@@ -162,31 +162,31 @@ export const FEATURES_LIST = [
     icon: '/assets/images/png/menu.png',
     title: 'Menù digitale personalizzabile',
     description: 'Crea e aggiorna in autonomia la tua offerta, sia essa di prodotti, servizi o esperienze.',
-    imgStyle: 'absolute -left-[8%] -top-[16%]'
+    imgStyle: 'absolute md:-left-[8%] md:-top-[16%] -left-[3%] -top-[24%]'
   },
   {
     icon: '/assets/images/png/Funzionalità-system.png',
     title: 'Sistema di ordinazione e gestione diretta',
     description: 'I clienti scelgono e ordinano dal proprio smartphone, senza attese o intermediari.',
-    imgStyle: 'absolute -left-[6%] -top-[19%]'
+    imgStyle: 'absolute md:-left-[6%] md:-top-[19%] -left-[2%] -top-[21%]'
   },
   {
     icon: '/assets/images/png/Funzionalità-data.png',
     title: 'Visualizzazione i dati in tempo reale',
     description: 'Ricevi, organizza e monitora tutte le richieste in modo semplice e centralizzato.',
-    imgStyle: 'absolute -left-[8%] -top-[16%]'
+    imgStyle: 'absolute md:-left-[8%] md:-top-[16%] -left-[1%] -top-[23%]'
   },
   {
     icon: '/assets/images/png/Funzionalità-scanner.png',
     title: 'Accesso all’offerta tramite QR Code',
     description: 'Ogni tavolo o punto vendita ha il proprio codice: facile da stampare, pronto all’uso.',
-    imgStyle: 'absolute -left-[8%] -top-[16%]'
+    imgStyle: 'absolute md:-left-[8%] md:-top-[16%] -top-[18%] -left-[2%]'
   },
   {
     icon: '/assets/images/png/Funzionalità-analize.png',
     title: 'Analisi, raccolta e visualizzazione dati',
     description: 'Tieni sotto controllo volumi, preferenze e andamento dell’attività, in modo chiaro.',
-    imgStyle: 'absolute -left-[8%] -top-[18%]'
+    imgStyle: 'absolute md:-left-[8%] md:-top-[18%] left-[-3%] top-[-20%]'
   }
 ]
 export const VANTAGGI_LIST = [
