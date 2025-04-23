@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Paragraph from '../custom-ui/paragraph'
+import Paragraph from '../custom-ui/Paragraph'
 import CustomButton from '../custom-ui/CustomButton'
 
 const GestioneSemplice = () => {
