@@ -11,7 +11,7 @@ import { BENEFITS_LIST } from '../../utils/helper'
 
 const VantaggiPerTe = () => {
   return (
-    <div>
+    <div className='relative'>
       <Image className='w-full max-w-[292px] sm:max-w-[400px] xl:max-w-[585px] absolute -translate-x-[50%] left-[50%] -top-0 lg:-top-4 z-50' height={158} width={585} src={'/assets/images/png/yellow-3-tabli.png'} alt='top layer' />
       <Image className='w-full object-cover' height={217} width={1920} src={'/assets/images/png/benefits-top-layer.png'} alt='top layer' />
       <div className="bg-yellow translate-y-[-1px] pb-14 md:pb-[60px] max-md:pb-20">
