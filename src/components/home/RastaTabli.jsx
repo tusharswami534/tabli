@@ -1,0 +1,72 @@
+'use client';
+
+import { useEffect, useState } from 'react'; import Image from 'next/image'
+import Heading from '../custom-ui/Heading';
+import InputField from '../custom-ui/InputField';
+import CustomButton from '../custom-ui/CustomButton';
+
+const RastaTabli = () => {
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 48);
+        const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0 });
+
+        useEffect(() => {
+            const interval = setInterval(() => {
+                const now = new Date();
+                const diff = targetDate.getTime() - now.getTime();
+
+                if (diff <= 0) {
+                    clearInterval(interval);
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+                setTimeLeft({ days, hours, minutes });
+            }, 1000);
+
+            return () => clearInterval(interval);
+        }, []);
+  return (
+      <div className='bg-dark-blue relative min-h-screen items-center justify-center flex -mt-24  overflow-hidden'>
+          <div className='absolute left-[-2%] -top-[%] z-20'>
+              <Image src="/assets/images/png/phone-handing.png" alt='phone-handing' width={678} height={600} className='2xl:w-[678px] max-w-[678px] w-full' />
+          </div>
+          <div className='absolute right-[-4%] -top-[15%] z-10'>
+              <Image src="/assets/images/png/food-plate.png" alt='phone-handing' width={591} height={600} className='2xl:w-[591px] h-[600px] max-w-[591px] w-full' />
+          </div>
+          <div className="container mx-auto px-4">
+              <div className="bg-dark-blue text-white text-center p-6 rounded-lg max-w-[670px] ml-auto space-y-6">
+                  <Heading headingText="Resta aggiornato su Tabli, il lancio è dietro l’angolo!" className="!text-white !max-w-[622px]"/>
+
+                  <div className="flex justify-center gap-4 ">
+                      {[
+                          { label: 'Giorni', value: timeLeft.days },
+                          { label: 'Ore', value: timeLeft.hours },
+                          { label: 'Minuti', value: timeLeft.minutes },
+                      ].map(({ label, value }) => (
+                          <div
+                              key={label}
+                              className="bg-light-blue rounded-lg px-6 py-6 !w-[218px] h-[180px] justify-center shadow-md flex flex-col items-center"
+                          >
+                              <span className="text-yellow text-80 font-extrabold leading-normal">{value}</span>
+                              <span className="text-xl mt-1">{label}</span>
+                          </div>
+                      ))}
+                  </div>
+
+                  <div className="space-y-2 ">
+                      <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold">Email</label>
+                      <InputField placeholder="Inserisci la tua Email" type='email' myClass="!max-w-[345px] !mr-auto !flex !justify-start"/>
+                      <CustomButton buttonName="  ISCRIVITI ORA" className="!w-[344px] h-[45px] !flex !justify-center !items-center !mt-6"/>
+                  </div>
+              </div>
+              
+      </div>
+    </div>
+  )
+}
+
+export default RastaTabli

@@ -6,13 +6,13 @@ import CustomButton from '../custom-ui/CustomButton'
 const MaggioriInformazioni = () => {
   return (
     <>
-      <div className="bg-yellow relative overflow-x-clip -mt-0.5">
+      <div className="bg-yellow relative overflow-x-clip -mt-0.5 ">
         <div className='flex gap-[160px] max-sm:translate-y-[-92px]  max-md:flex-col max-sm:pb-0 max-xl:pb-16 max-lg:gap-4  max-2xl:px-5 max-w-[1440px] mx-auto items-center justify-between lg:justify-end md:pt-[110px]'>
           <div>
             <Image className='2xl:h-[609px] max-lg:w-[320px]  relative z-10' height={609} width={508} src={'/assets/images/png/more-info-img.png'} alt='side img' />
           </div>
           <div className="mb-[-52px]">
-            <Image className='absolute pointer-events-none -right-20 max-xl:hidden top-[200px]' height={759} width={1152} src={'/assets/images/png/more-information-side-line.png'} alt='side line' />
+            <Image className='absolute pointer-events-none -right-20 max-xl:hidden top-[200px] ' height={759} width={1152} src={'/assets/images/png/more-information-side-line.png'} alt='side line' />
             <div className="lg:max-w-[524px] max-w-[350px]">
               <p className='lg:text-40 italic text-dark-grey text-32 max-w-[500px] font-black leading-100 pb-4 lg:pb-6'>Vuoi far crescere la tua attività?</p>
               <p className='lg:text-32 md:italic text-dark-grey text-xl font-bold md:font-black leading-100 '>Semplifica la gestione, migliora l’esperienza dei tuoi clienti</p>
@@ -22,7 +22,7 @@ const MaggioriInformazioni = () => {
           </div>
         </div>
       </div>
-      <Image className='w-full max-sm:h-[73px] -translate-y-0.5' height={136} width={1920} src={'/assets/images/png/more-info-bottom-layer.png'} alt='bottom layer' />
+      <Image className='w-full max-sm:h-[73px] -translate-y-0.5 relative z-10' height={136} width={1920} src={'/assets/images/png/more-info-bottom-layer.png'} alt='bottom layer' />
     </>
   )
 }
