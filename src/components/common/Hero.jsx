@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { HERO_SWIPER_DATA } from "src/utils/helper";
 import Image from "next/image";
+import HeroCardData from "./HeroCardData";
 
 
 const Hero = () => {
@@ -69,6 +70,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <HeroCardData/>
     </div>
   )
 }
