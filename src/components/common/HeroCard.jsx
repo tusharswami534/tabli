@@ -9,7 +9,7 @@ const HeroCard = ({ title, description, icon }) => {
         <>
             <div>
                 <div
-                    className={`rounded-[20px] max-w-[330px] flex justify-center items-center flex-col min-h-[270px] relative p-2 shadow-[0px_8px_16px_0px_#00000029] ${path === '/' ? 'max-md:min-h-[170px]' : ''}`}
+                    className={`rounded-[20px] max-w-[330px] flex justify-center items-center flex-col min-h-[270px] relative p-2 shadow-[0px_8px_16px_0px_#00000029] ${path === '/' ? 'max-md:min-h-[170px] bg-dark-blue' : 'bg-white'}`}
                 >
                     <Image
                         src="/assets/images/webp/fram.webp"

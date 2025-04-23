@@ -16,9 +16,11 @@ import HeroCardData from "./HeroCardData";
 const Hero = () => {
   const path = usePathname()
   return (
-    <div className={` pb-[72px] max-md:pb-0 relative overflow-hidden ${path === '/' ? 'bg-dark-blue' : '!bg-yellow'}`}>
+    <div className={` pb-[72px] max-md:pb-0 relative ${path === '/' ? 'bg-dark-blue' : '!bg-yellow'}`}>
+      <span className=" absolute right-0 max-lg:hidden pointer-events-none top-[186px]"><Icons icon='heroRightVector'/></span>
+      <span className=" absolute left-0 max-lg:hidden pointer-events-none top-[75%] -translate-y-1/2"><Icons icon='heroLeftVector'/></span>
       <Nav />
-      <div className='flex w-full relative py-[62px] max-md:pt-20 max-md:pb-0'>
+      <div className='flex w-full relative pt-[62px] pb-[134px] max-md:pt-20 max-md:pb-0'>
       <Link className='absolute max-md:hidden bottom-4 left-1/2 -translate-x-1/2' href={'#come-funziona'}>
         <Icons icon='downArrow' />
       </Link>
