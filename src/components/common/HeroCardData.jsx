@@ -35,7 +35,7 @@ const HeroCardData = () => {
                         </>
                     ) : (
                         <>
-                            {COME_FUNZIONA_DATA_LIST.map((data, index) => (
+                            {/* {COME_FUNZIONA_DATA_LIST.map((data, index) => (
                                 <HeroCard
                                     key={index}
                                     icon={data.img}
@@ -44,7 +44,7 @@ const HeroCardData = () => {
                                     titleColor="text-[#136F77]"
                                     description={data.description}
                                 />
-                            ))}
+                            ))} */}
                         </>
                     )}
                 </div>
