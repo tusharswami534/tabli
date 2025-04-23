@@ -53,7 +53,7 @@
 
 .swiper-pagination {
   position: relative !important;
-  margin-top: 44px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,5 +103,19 @@
 @media (max-width: 399.98px) {
   .hero-slider .swiper-slide-active img {
     transform: scale(1.44);
+  }
+}
+/* animate spin */
+
+.food-plate{
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
