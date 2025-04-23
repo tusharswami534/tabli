@@ -41,7 +41,7 @@ const RastaTabli = () => {
                 <Image src="/assets/images/png/food-plate.png" alt='phone-handing' width={591} height={600} className='2xl:w-[591px] food-plate object-contain h-[600px] md:w-[400px] w-[180px] max-md:h-[167px] xl:w-[500px]' />
             </div>
             <div className="container max-w-[1200px] mx-auto md:px-4 relative z-30">
-                <div className="text-white text-center p-6 rounded-lg max-w-[670px] ml-auto md:space-y-6">
+                <div className="text-white text-center p-6 rounded-lg max-w-[670px] mx-auto xl:ml-auto md:space-y-6">
                     <Heading headingText="Resta aggiornato su Tabli, il lancio è dietro l’angolo!" className="!text-white !max-w-[622px]" />
                     <div className="flex justify-center gap-2 md:gap-4 mb-10 mt-4">
                         {[{ label: 'Giorni', value: timeLeft.days },
