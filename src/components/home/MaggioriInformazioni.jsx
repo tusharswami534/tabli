@@ -6,7 +6,7 @@ import CustomButton from '../custom-ui/CustomButton'
 const MaggioriInformazioni = () => {
   return (
     <>
-      <div className="bg-yellow relative overflow-x-clip -mt-0.5 pb-[200px]">
+      <div className="bg-yellow relative overflow-x-clip -mt-0.5 pb-4 md:pb-20 xl:pb-[200px]">
         <div className='flex gap-[160px] max-sm:translate-y-[-92px]  max-md:flex-col max-sm:pb-0 max-xl:pb-16 max-lg:gap-4  max-2xl:px-5 max-w-[1400px] mx-auto items-center justify-between lg:justify-end md:pt-[110px]'>
           <div>
             <Image className='2xl:h-[609px] max-lg:w-[320px] relative z-30' height={609} width={508} src={'/assets/images/png/more-info-img.png'} alt='side img' />
