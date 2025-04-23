@@ -112,3 +112,20 @@ export const COSA_POTRAI_DATA_LIST = [
       description:"Semplifica le interazioni con i clienti, ottimizza i tempi e offri un servizio moderno, chiaro e senza errori.",
     },
   ];
+export const CONTENT_LIST = [
+  {
+    title: "Assistenza Dedicata Sempre al Tuo Fianco",
+    description:
+      "Con Tabli, non sarai mai solo. Offriamo un supporto completo e dedicato per aiutarti a sfruttare al meglio tutte le funzionalità della piattaforma. Che si tratti di configurare il tuo menù digitale, gestire gli ordini o risolvere qualsiasi dubbio tecnico, il nostro team è sempre pronto a fornirti assistenza in modo rapido e risolutivo",
+  },
+  {
+    title: "Autonomia Completa con Guide e Risorse",
+    description:
+      "Inoltre, oltre al supporto diretto, mettiamo a disposizione guide, FAQ e tutorial dettagliati. Potrai così imparare a gestire ogni aspetto della piattaforma in totale autonomia, senza perdere tempo.",
+  },
+  {
+    title: "Ottimizza il Tuo Lavoro con Soluzioni Efficaci",
+    description:
+      "Con Tabli, ogni parte del processo è pensata per facilitare il tuo lavoro, rendendolo più efficiente e produttivo. Il nostro obiettivo è che tu possa concentrarti su ciò che è più importante: gestire la tua attività al meglio, mentre noi ci occupiamo della parte tecnologica.",
+  },
+]
