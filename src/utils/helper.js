@@ -189,4 +189,11 @@ export const FEATURES_LIST = [
     imgStyle: 'absolute -left-[8%] -top-[18%]'
   }
 ]
+export const VANTAGGI_LIST = [
+  'Gestione centralizzata e aggiornata in tempo reale',
+  'Niente più errori nelle ordinazioni o incomprensioni',
+  'Nessuna app da installare, né per te né per i clienti',
+  'Maggiore autonomia per il cliente, meno stress per il personale',
+  'Adatto a ogni tipo di attività: bar, lidi, hotel, saloni, officine e molto altro',
+]
 
