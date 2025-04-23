@@ -4,7 +4,7 @@ import { FEATURES_LIST } from '../../utils/helper'
 
 const FunzionalitaPrincipali = () => {
   return (
-    <div className='bg-yellow xl:pb-[300px] pb-[150px] 2xl:pt-[200px] pt-[130px] relative'>
+    <div className='bg-yellow xl:pb-[180px] pb-[150px] 2xl:pt-[260px] pt-[130px] relative'>
       <Image className='absolute 2xl:top-[16%] min-[1200px]:top-[27%] min-[1200px]:h-[830px] h-auto max-2xl:w-full xl:block hidden min-[2000px]:left-[20%]' src="/assets/images/png/Funzionalità-layer.png" alt='top-layer' width={1920} height={152} />
       <div className="max-w-[1560px] mx-auto pb-10 px-8">
         <h2 className='font-black text-40 text-center pb-4 italic leading-130'>Funzionalità Principali</h2>
