@@ -12,8 +12,10 @@ import { BENEFITS_LIST } from '../../utils/helper'
 const VantaggiPerTe = () => {
   return (
     <div className='relative'>
-      <Image className='w-full max-w-[292px] sm:max-w-[400px] z-0 xl:max-w-[585px] absolute -translate-x-[50%] left-[50%] -top-10 lg:-top-16' height={158} width={585} src={'/assets/images/png/yellow-3-tabli.png'} alt='top layer' />
-      <Image className='w-full object-cover relative z-10' height={217} width={1920} src={'/assets/images/png/benefits-top-layer.png'} alt='top layer' />
+      <div className="bg-dark-blue -scale-y-0.5">
+        <Image className='w-full max-w-[292px] sm:max-w-[400px] pointer-events-none z-0 xl:max-w-[585px] absolute -translate-x-[50%] left-[50%] -top-10 lg:-top-16' height={158} width={585} src={'/assets/images/png/yellow-3-tabli.png'} alt='top layer' />
+        <Image className='w-full object-cover relative z-10 pointer-events-none' height={217} width={1920} src={'/assets/images/png/benefits-top-layer.png'} alt='top layer' />
+      </div>
       <div className="bg-yellow translate-y-[-1px] pb-14 md:pb-[60px] max-md:pb-20">
         <div className="md:py-10 py-6">
           <Heading className='text-center' headingText='Vantaggi per Te' />
