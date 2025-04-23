@@ -7,8 +7,8 @@ const page = () => {
     return (
         <div>
             <VantaggiAttività/>
-            <SoluzioniMigliorare />
             <FunzionalitaPrincipali/>
+            <SoluzioniMigliorare />
         </div>
     )
 }
