@@ -60,7 +60,7 @@ const RastaTabli = () => {
                   <div className="space-y-2 max-w-[345px] mx-auto">
                       <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold">Email</label>
                       <InputField placeholder="Inserisci la tua Email" type='email' myClass="!max-w-[345px] "/>
-                      <CustomButton buttonName="  ISCRIVITI ORA" className="!w-[344px] h-[45px] !mt-6"/>
+                      <CustomButton buttonName="  ISCRIVITI ORA" className="!w-[344px] h-[45px] !mt-6" type= "submit"/>
                   </div>
               </div>
               
