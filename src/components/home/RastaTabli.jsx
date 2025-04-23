@@ -30,15 +30,21 @@ const RastaTabli = () => {
             return () => clearInterval(interval);
         }, []);
   return (
-      <div className='bg-dark-blue relative min-h-screen items-center justify-center flex -mt-24  overflow-hidden'>
-          <div className='absolute left-[-2%] -top-[10%] z-20'>
-              <Image src="/assets/images/png/phone-handing.png" alt='phone-handing' width={678} height={600} className='2xl:w-[678px] max-w-[678px] w-full' />
+      <div className='bg-dark-blue relative min-h-screen items-center justify-center flex -mt-24 overflow-x-clip lg:pt-20'>
+           <div className='absolute z-10 2xl:bottom-[-8%] xl:bottom-[-8%] lg:bottom-[-17%] md:bottom-[-9%] bottom-[-7%] sm:left-[9%] left-[14%] '>
+                    <Image src="/assets/images/webp/menu.webp" alt='menu' width={729} height={517} className='2xl:w-[729px] xl:w-[600px] lg:w-[300px] md:w-[250px] w-[236px]' />
           </div>
-          {/* <div className='absolute right-[-4%] -top-[15%] z-10'>
-              <Image src="/assets/images/png/food-plate.png" alt='phone-handing' width={591} height={600} className='2xl:w-[591px] h-[600px] max-w-[591px] w-full' />
-          </div> */}
+          <div className='absolute 2xl:left-0 -left-[3%] top-[33%] xl:block hidden'>
+              <Image src="/assets/images/webp/timmer-outline.webp" alt='side outline' width={700} height={900}/>
+          </div>
+          <div className='absolute left-[-2%] -top-[14%] z-20'>
+              <Image src="/assets/images/png/phone-handing.png" alt='phone-handing' width={678} height={600} className='2xl:w-[678px] max-w-[678px] w-full max-lg:w-[220px]' />
+          </div>
+          <div className='absolute 2xl:right-[-8%] right-0 -top-[15%] z-10'>
+              <Image src="/assets/images/png/food-plate.png" alt='phone-handing' width={591} height={600} className='2xl:w-[591px] 2xl:h-[600px] max-w-[591px] w-full object-fit-contain max-lg:w-[124px]' />
+          </div>
           <div className="container mx-auto px-4">
-              <div className="bg-dark-blue text-white text-center rounded-lg max-w-[670px] ml-auto space-y-6">
+              <div className="bg-dark-blue text-white text-center rounded-lg max-w-[670px] ml-auto max-xl:mx-auto space-y-6">
                   <Heading headingText="Resta aggiornato su Tabli, il lancio è dietro l’angolo!" className="!text-white !max-w-[622px]"/>
 
                   <div className="flex justify-center gap-4 ">
