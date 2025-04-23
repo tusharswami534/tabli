@@ -10,7 +10,7 @@ import HeroCard from "./HeroCard";
 const HeroCardData = () => {
     const path = usePathname();
     return (
-        <div className={`px-4 ${path === '/' ? 'pt-20 z-10 max-xl:pt-16 max-lg:pt-14 max-md:pt-12 max-sm:pt-10 pb-[94px] max-lg:pb-20 max-sm:pb-[72px] relative' : ''}`}>
+        <div id="cosa-potrai" className={`px-4 ${path === '/' ? 'pt-20 z-10 max-xl:pt-16 max-lg:pt-14 max-md:pt-12 max-sm:pt-10 pb-[94px] max-lg:pb-20 max-sm:pb-[72px] relative' : ''}`}>
             <div className="container max-w-[1405px] justify-center flex flex-col items-center mx-auto">
                 {path === '/' ? (<h3 className="text-40 max-lg:text-4xl max-sm:text-32  pb-6 font-black italic text-white text-center">
                     Cosa potrai fare con Tabli
