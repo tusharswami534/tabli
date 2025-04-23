@@ -31,14 +31,14 @@ const RastaTabli = () => {
         }, []);
   return (
       <div className='bg-dark-blue relative min-h-screen items-center justify-center flex -mt-24  overflow-hidden'>
-          <div className='absolute left-[-2%] -top-[%] z-20'>
+          <div className='absolute left-[-2%] -top-[10%] z-20'>
               <Image src="/assets/images/png/phone-handing.png" alt='phone-handing' width={678} height={600} className='2xl:w-[678px] max-w-[678px] w-full' />
           </div>
-          <div className='absolute right-[-4%] -top-[15%] z-10'>
+          {/* <div className='absolute right-[-4%] -top-[15%] z-10'>
               <Image src="/assets/images/png/food-plate.png" alt='phone-handing' width={591} height={600} className='2xl:w-[591px] h-[600px] max-w-[591px] w-full' />
-          </div>
+          </div> */}
           <div className="container mx-auto px-4">
-              <div className="bg-dark-blue text-white text-center p-6 rounded-lg max-w-[670px] ml-auto space-y-6">
+              <div className="bg-dark-blue text-white text-center rounded-lg max-w-[670px] ml-auto space-y-6">
                   <Heading headingText="Resta aggiornato su Tabli, il lancio è dietro l’angolo!" className="!text-white !max-w-[622px]"/>
 
                   <div className="flex justify-center gap-4 ">
@@ -49,18 +49,18 @@ const RastaTabli = () => {
                       ].map(({ label, value }) => (
                           <div
                               key={label}
-                              className="bg-light-blue rounded-lg px-6 py-6 !w-[218px] h-[180px] justify-center shadow-md flex flex-col items-center"
+                              className="bg-light-blue rounded-lg px-6 py-6 !w-[218px] md:h-[180px] h-[128px] justify-center shadow-md flex flex-col items-center"
                           >
-                              <span className="text-yellow text-80 font-extrabold leading-normal">{value}</span>
+                              <span className="text-yellow md:text-80 text-40 font-extrabold leading-normal">{value}</span>
                               <span className="text-xl mt-1">{label}</span>
                           </div>
                       ))}
                   </div>
 
-                  <div className="space-y-2 ">
+                  <div className="space-y-2 max-w-[345px] mx-auto">
                       <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold">Email</label>
-                      <InputField placeholder="Inserisci la tua Email" type='email' myClass="!max-w-[345px] !mr-auto !flex !justify-start"/>
-                      <CustomButton buttonName="  ISCRIVITI ORA" className="!w-[344px] h-[45px] !flex !justify-center !items-center !mt-6"/>
+                      <InputField placeholder="Inserisci la tua Email" type='email' myClass="!max-w-[345px] "/>
+                      <CustomButton buttonName="  ISCRIVITI ORA" className="!w-[344px] h-[45px] !mt-6"/>
                   </div>
               </div>
               
