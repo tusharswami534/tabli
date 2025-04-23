@@ -4,9 +4,9 @@ import { FEATURES_LIST } from '../../utils/helper'
 
 const FunzionalitaPrincipali = () => {
   return (
-    <div className='bg-yellow xl:pb-[180px] pb-[150px] 2xl:pt-[260px] pt-[130px] relative'>
+    <div className='bg-yellow xl:pb-[180px] md:pb-[150px] pb-30 2xl:pt-[260px] md:pt-[130px] pt-[160px] relative'>
       <Image className='absolute 2xl:top-[16%] min-[1200px]:top-[27%] min-[1200px]:h-[830px] h-auto max-2xl:w-full xl:block hidden min-[2000px]:left-[20%]' src="/assets/images/png/Funzionalità-layer.png" alt='top-layer' width={1920} height={152} />
-      <div className="max-w-[1560px] mx-auto pb-10 px-8">
+      <div className="max-w-[1560px] mx-auto pb-10 px-[26px]">
         <h2 className='font-black text-40 text-center pb-4 italic leading-130'>Funzionalità Principali</h2>
         <h5 className='font-black md:text-32 text-26 text-center italic leading-130'>Tutti gli strumenti di cui hai bisogno, in un’unica piattaforma.</h5>
         <div className="flex max-xl:flex-wrap justify-center pt-20 2xl:gap-[27px] min-[1300px]:gap-[30px] gap-[50px]">
