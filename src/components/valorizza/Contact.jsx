@@ -59,8 +59,8 @@ const Contact = () => {
 
   return (
     <div id='contatti' className='bg-yellow'>
-      <div className=' pt-[200px] lg:pb-[340px] pb-[200px] relative max-w-[1920px] mx-auto'>
-        <Heading headingText="Contatti" className="!text-center !pb-[38px] !leading-normal" />
+      <div className=' md:pt-[200px] pt-[140px] lg:pb-[340px] pb-[200px] relative max-w-[1920px] mx-auto'>
+        <Heading headingText="Contatti" className="!text-center !pb-[38px] !leading-normal !text-dark-blue" />
         <div className='absolute bottom-[5%] lg:block hidden '>
           <Image src="/assets/images/png/contact-outline.png" alt='contact-outline' width={1920} height={1080} className='lg:h-[870px]' />
         </div>
