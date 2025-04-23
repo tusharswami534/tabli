@@ -112,3 +112,30 @@ export const COSA_POTRAI_DATA_LIST = [
       description:"Semplifica le interazioni con i clienti, ottimizza i tempi e offri un servizio moderno, chiaro e senza errori.",
     },
   ];
+
+  export const HERO_SWIPER_DATA = [
+    {
+      image: "/assets/images/webp/first-mobile.webp",
+      alt : 'first mobile'
+    },
+    {
+      image: "/assets/images/webp/second-mobile.webp",
+      alt : 'second mobile'
+    },
+    {
+      image: "/assets/images/webp/third-mobile.webp",
+      alt : 'third mobile'
+    },
+    {
+      image: "/assets/images/webp/first-mobile.webp",
+      alt : 'first mobile'
+    },
+    {
+      image: "/assets/images/webp/second-mobile.webp",
+      alt : 'second mobile'
+    },
+    {
+      image: "/assets/images/webp/third-mobile.webp",
+      alt : 'third mobile'
+    },
+  ];

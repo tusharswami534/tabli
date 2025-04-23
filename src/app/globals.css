@@ -76,3 +76,14 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Hero Swiper */
+
+.hero-swiper .mySwiper .swiper-wrapper .swiper-slide-active{
+  width: 284px !important;
+  height: 522px !important; 
+  img{
+    width: 284px !important;
+    height: 522px !important;
+  }
+}
