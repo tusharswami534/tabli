@@ -9,7 +9,7 @@ const HeroCard = ({ title, description, icon }) => {
         <>
             <div>
                 <div
-                    className={`rounded-[20px] max-w-[330px] flex justify-center items-center flex-col min-h-[270px] relative p-2 shadow-[0px_8px_16px_0px_#00000029] ${path === '/' ? 'max-md:min-h-[170px] bg-dark-blue' : 'bg-white'}`}
+                    className={`rounded-[20px] max-w-[330px] flex justify-center items-center transition-all duration-300 flex-col min-h-[270px] relative p-2 shadow-[0px_8px_16px_0px_#00000029] ${path === '/' ? 'max-md:min-h-[170px] bg-light-blue hover:shadow-[0px_8px_16px_0px_#fff]' : 'bg-white'}`}
                 >
                     <Image
                         src="/assets/images/webp/fram.webp"
@@ -41,7 +41,7 @@ const HeroCard = ({ title, description, icon }) => {
                     />
                     <div className="xl:p-7 lg:p-3 p-2 flex justify-center items-center flex-col">
                         <Image src={icon} width={50} height={50} className='max-md:size-[38px] ' alt="icon" />
-                        <h4 className={`text-26 mt-6 font-bold text-center max-w-[250px] ${path === '/' ? 'text-white max-lg:text-2xl max-md:text-xl max-sm:text-base' : 'text-dark-blue'}`}>
+                        <h4 className={`text-26 font-bold leading-131 text-center max-w-[250px] ${path === '/' ? 'text-white max-sm:font-medium max-lg:text-2xl max-md:text-xl max-sm:text-base mt-6 max-md:mt-5 max-sm:mt-4' : 'text-dark-blue mt-2'}`}>
                             {title}
                         </h4>
                         {path !== '/' && (<p className="text-base max-w-[260px] text-[#363B3C] font-medium text-center mt-2">

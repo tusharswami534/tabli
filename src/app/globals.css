@@ -18,6 +18,8 @@
   /* Shadow */
 
   --shadow-common-button: 2px 4px 0px 0px #00000029;
+  --shadow-logo: 2px 2px 0px 0px #00000029;
+
 
   /* Line Height */
   --spacing-100: 100%;
@@ -78,8 +80,12 @@
   display: none;
 }
 
-.hero-text{
-  text-shadow:  2px 2px 8px #00000029;
+.hero-text {
+  text-shadow: 2px 2px 8px #00000029;
+}
+
+.common-text-shadow{
+  text-shadow: 2px 2px 0px #00000029;
 }
 
 /* Hero Swiper */
