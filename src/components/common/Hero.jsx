@@ -36,7 +36,7 @@ const Hero = () => {
                 <CustomButton buttonName={'Contatti'} className={`max-w-[160px] leading-119 border-transparent max-sm:max-w-[280px] w-full border border-solid !text-dark-blue !bg-white ${path === '/' ? '!border-dark-blue hover:!bg-yellow' : '!border-transparent hover:!bg-dark-blue hover:!text-white'}`} />
               </div>
             </div>
-            <div className="w-full lg:w-6/12 max-lg:mt-20">
+            <div className="w-full min-[1025px]:w-6/12 max-lg:mt-20">
               <div className="max-w-[700px] max-lg:mx-auto ml-auto">
                 <Swiper
                   slidesPerView={2.5}
