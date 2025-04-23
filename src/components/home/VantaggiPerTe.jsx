@@ -12,8 +12,9 @@ import { BENEFITS_LIST } from '../../utils/helper'
 const VantaggiPerTe = () => {
   return (
     <div>
+      <Image className='w-full max-w-[292px] sm:max-w-[400px] xl:max-w-[585px] absolute -translate-x-[50%] left-[50%] -top-0 lg:-top-4 z-50' height={158} width={585} src={'/assets/images/png/yellow-3-tabli.png'} alt='top layer' />
       <Image className='w-full object-cover' height={217} width={1920} src={'/assets/images/png/benefits-top-layer.png'} alt='top layer' />
-      <div className="bg-yellow translate-y-[-1px] pb-14 md:pb-[180px]">
+      <div className="bg-yellow translate-y-[-1px] pb-14 md:pb-[60px] max-md:pb-20">
         <div className="md:py-10 py-6">
           <Heading className='text-center' headingText='Vantaggi per Te' />
         </div>
@@ -40,20 +41,19 @@ const VantaggiPerTe = () => {
             pagination={{ clickable: true }}
             slidesPerGroup={1}
             breakpoints={{
-              1024: {
+              1100: {
                 slidesPerView: 4, centeredSlides: false,
-                centeredSlidesBounds: false
+              },
+              1024: {
+                slidesPerView: 3, centeredSlides: false,
               },
               768: {
                 slidesPerView: 2.2, spaceBetween: 30,
-                centeredSlides: true,
-                centeredSlidesBounds: true
               },
               640: { slidesPerView: 1.6 },
               320: {
-                slidesPerView: 1.2,
+                slidesPerView: 1.3,
                 centeredSlides: true,
-                centeredSlidesBounds: true
               },
             }}
             className="flex items-center justify-center max-w-[1320px] mx-auto py-[89px] pb-[40px]">
