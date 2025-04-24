@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { CONTENT_LIST } from '../../utils/helper'
+import { SOLUZIONI_LIST } from '../../utils/helper'
 import Heading from '../custom-ui/Heading'
 const SoluzioniMigliorare = () => {
   return (
@@ -17,7 +17,7 @@ const SoluzioniMigliorare = () => {
               <Heading headingText="Soluzioni per migliorare il tuo lavoro" className="lg:!max-w-[465px] max-lg:!text-center max-sm:!text-left !max-w-none max-lg:!text-40 !leading-130 !text-yellow xl:!pb-10 !pb-6" />
 
               <div>
-                {CONTENT_LIST.map((item, index) => (
+                {SOLUZIONI_LIST.map((item, index) => (
                   <div key={index} className="pb-8">
                     <h4 className="text-26 font-bold text-white italic max-lg:text-center max-sm:text-left max-sm:pb-3 !leading-130">
                       {item.title}

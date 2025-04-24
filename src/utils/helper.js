@@ -140,7 +140,7 @@ export const COSA_POTRAI_DATA_LIST = [
     },
   ];
 
-export const CONTENT_LIST = [
+export const SOLUZIONI_LIST = [
   {
     title: "Assistenza Dedicata Sempre al Tuo Fianco",
     description:
@@ -157,7 +157,7 @@ export const CONTENT_LIST = [
       "Con Tabli, ogni parte del processo è pensata per facilitare il tuo lavoro, rendendolo più efficiente e produttivo. Il nostro obiettivo è che tu possa concentrarti su ciò che è più importante: gestire la tua attività al meglio, mentre noi ci occupiamo della parte tecnologica.",
   },
 ]
-export const FEATURES_LIST = [
+export const FUNZIONALITA_LIST = [
   {
     icon: '/assets/images/png/menu.png',
     title: 'Menù digitale personalizzabile',
