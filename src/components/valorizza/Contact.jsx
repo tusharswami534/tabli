@@ -61,11 +61,11 @@ const Contact = () => {
     <div id='contatti' className='bg-yellow'>
       <div className=' md:pt-[200px] pt-[140px] lg:pb-[390px] pb-[200px] relative max-w-[1920px] mx-auto'>
         <div className='absolute z-10 2xl:bottom-[-15%] xl:bottom-[-12%] lg:bottom-[-10%] md:bottom-[-9%] bottom-[-3%] sm:left-[9%] left-[14%] '>
-          <Image src="/assets/images/webp/menu.webp" alt='menu' width={729} height={517} className='2xl:w-[729px] xl:w-[600px] lg:w-[300px] md:w-[250px] w-[236px]' />
+          <Image src="/assets/images/webp/menu.webp" alt='menu' width={729} height={517} className='2xl:w-[729px] xl:w-[600px] lg:w-[300px] md:w-[250px] w-[236px] pointer-events-none' />
         </div>
         <Heading headingText="Contatti" className="!text-center !pb-[38px] !leading-normal !text-dark-blue !text-40 " />
         <div className='absolute bottom-[5%] lg:block hidden '>
-          <Image src="/assets/images/png/contact-outline.png" alt='contact-outline' width={1920} height={1080} className='lg:h-[870px]' />
+          <Image src="/assets/images/png/contact-outline.png" alt='contact-outline' width={1920} height={1080} className='lg:h-[870px] pointer-events-none' />
         </div>
         <div className="container mx-auto px-4 max-w-[760px]">
           <form onSubmit={handleSubmit} className="rounded-lg w-full max-w-3xl relative z-10">
@@ -89,8 +89,8 @@ const Contact = () => {
               </div>
             </div>
             <div className="mt-10">
-              <label htmlFor="messaggio" className="block font-bold mb-2">  Messaggio </label>
-              <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button resize-none bg-white placeholder:text-black text-black relative" value={formData.messaggio} onChange={handleChange} />
+              <label htmlFor="messaggio" className="block font-bold mb-2 text-dark-grey text-xl">  Messaggio </label>
+              <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button resize-none bg-white text-base placeholder:text-gray text-gray relative" value={formData.messaggio} onChange={handleChange} />
               {errors.messaggio && <p className="text-red-600 text-sm mt-1 absolute">{errors.messaggio}</p>}
             </div>
             <div className="flex justify-center mt-10">
