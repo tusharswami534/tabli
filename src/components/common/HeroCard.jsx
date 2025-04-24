@@ -41,7 +41,7 @@ const HeroCard = ({ title, description, icon }) => {
                     />
                     <div className="xl:p-7 lg:p-3 p-2 flex justify-center items-center flex-col">
                         <Image src={icon} width={50} height={50} className='max-md:size-[38px] ' alt="icon" />
-                        <h4 className={`text-26 font-bold leading-131 text-center max-w-[250px] ${path === '/' ? 'text-white max-sm:font-medium max-lg:text-2xl max-md:text-xl max-sm:text-base mt-6 max-md:mt-5 max-sm:mt-4' : 'text-dark-blue mt-2'}`}>
+                        <h4 className={`text-26 font-bold leading-131 text-center max-w-[250px] ${path === '/' ? 'text-white max-sm:font-medium max-lg:text-2xl max-md:text-xl max-sm:text-base mt-6 max-md:mt-5 max-sm:mt-4' : 'text-dark-blue italic mt-2'}`}>
                             {title}
                         </h4>
                         {path !== '/' && (<p className="text-base max-w-[260px] text-[#363B3C] font-medium text-center mt-2">

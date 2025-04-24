@@ -18,13 +18,13 @@ const Hero = () => {
   const path = usePathname()
   return (
     <div className={` pb-[72px] max-md:pb-0 overflow-hidden relative ${path === '/' ? 'bg-dark-blue' : '!bg-yellow'}`}>
-      <span className=" absolute right-0 max-lg:hidden pointer-events-none top-[186px]"><Icons className={path !== '/' && 'stroke-dark-blue'} icon='heroRightVector' /></span>
-      <span className=" absolute left-0 max-lg:hidden pointer-events-none top-[75%] -translate-y-1/2"><Icons className={path !== '/' && 'stroke-dark-blue'} icon='heroLeftVector' /></span>
+      <span className=" absolute right-0 max-lg:hidden pointer-events-none top-[186px]"><Icons className={path === '/' ? 'stroke-yellow':  'stroke-dark-blue'} icon='heroRightVector' /></span>
+      <span className=" absolute left-0 max-lg:hidden pointer-events-none top-[70%] -translate-y-1/2"><Icons className={path === '/' ? 'stroke-yellow':  'stroke-dark-blue'} icon='heroLeftVector' /></span>
       <span className=" absolute left-0 lg:hidden pointer-events-none top-[88px] w-full"><Icons className={'w-full'} icon='heroSmVector' /></span>
       <Nav />
       <div className='flex w-full relative pt-[62px] pb-[134px] max-md:pt-20 max-md:pb-0'>
         <Link className='absolute max-md:hidden bottom-4 left-1/2 -translate-x-1/2' href={'#cosa-potrai'}>
-          <Icons icon='downArrow' />
+          <Icons icon='downArrow' className={`${path !== '/' && '!fill-dark-blue'}`} />
         </Link>
         <div className='container lg:px-4 max-w-[1632px] mx-auto'>
           <div className='flex items-center gap-5 max-lg:gap-0 max-lg:flex-col justify-between'>
@@ -34,7 +34,7 @@ const Hero = () => {
               <Paragraph paragraphText={path === '/' ? 'Con Tabli, potrai consultare l’offerta, ordinare e pagare direttamente dal tuo smartphone, in totale autonomia e senza attese.' : 'Permetti ai tuoi clienti di consultare i tuoi prodotti e servizi, ordinare o prenotare in autonomia, migliorando l’esperienza d’acquisto senza rivoluzionare la tua routine lavorativa.'} className={`max-sm:hidden max-lg:text-center ${path !== '/' && '!text-dark-grey'}`} />
               <div className='flex gap-4 mt-10 max-sm:flex-col max-lg:items-center max-lg:justify-center'>
                 <CustomButton buttonName={'Come Funziona'} className={`max-w-[160px] leading-119 max-sm:max-w-[280px] w-full hover:!bg-white hover:!text-dark-blue ${path !== '/' && '!text-white !bg-dark-blue'}`} />
-                <CustomButton buttonName={'Contatti'} className={`max-w-[160px] leading-119 border-transparent max-sm:max-w-[280px] w-full border border-solid !text-dark-blue !bg-white ${path === '/' ? '!border-dark-blue hover:!bg-yellow' : '!border-transparent hover:!bg-dark-blue hover:!text-white'}`} />
+                <CustomButton buttonName={'Contatti'} className={`max-w-[160px] leading-119 max-sm:max-w-[280px] w-full border border-solid !text-dark-blue !bg-white ${path === '/' ? '!border-dark-blue hover:!bg-yellow' : '!border-dark-blue hover:!bg-dark-blue hover:!text-white'}`} />
               </div>
             </div>
             <div className="w-full min-[1025px]:w-6/12 max-lg:mt-20">
