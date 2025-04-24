@@ -6,7 +6,7 @@ const VantaggiAttività = () => {
 
     return (
         <div className='bg-dark-blue relative pt-10 '>
-            <Image src="/assets/images/webp/outline.webp" alt='outline' width={1920} height={1080} className='w-full absolute 2xl:bottom-[-16%] min-[1200px]:-bottom-[21%] z-20  h-auto xl:block hidden min-[2000px]:!bottom-[-45%]' />
+            <Image src="/assets/images/webp/outline.webp" alt='outline' width={1920} height={1080} className='w-full absolute 2xl:bottom-[-13%] min-[1200px]:-bottom-[19%] z-20  h-auto xl:block hidden min-[2000px]:!bottom-[-45%]' />
             <Image src="/assets/images/webp/tabli-name.webp" alt='tabli name' width={585} height={158} className=' absolute min-[2000px]:!left-[45%] lg:top-[-23%] md:top-[-19%] top-[-10%] xl:left-[30%] lg:left-[18%] md:left-[10%] left-[9%] max-w-[585px] mx-auto w-full max-md:w-[292px]' />
             <Image className='absolute lg:top-[-16%] sm:-top-[13%] -top-[7%] sm:h-[152px] h-[88px] w-full' src="/assets/images/png/attivita-top-layer.png" alt='top-layer' width={1920} height={152} />
             <Image className='absolute lg:-bottom-[15%] z-10 md:-bottom-[12%] -bottom-[8%] w-full md:h-[152px] h-[88px]' src="/assets/images/webp/attivita-bottom-layer.webp" alt='bottom-layer' width={1920} height={152} />

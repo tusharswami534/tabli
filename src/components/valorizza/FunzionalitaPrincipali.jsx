@@ -12,7 +12,7 @@ const FunzionalitaPrincipali = () => {
         <h5 className='font-black md:text-32 text-26 text-center !text-dark-grey italic leading-130'>Tutti gli strumenti di cui hai bisogno, in un’unica piattaforma.</h5>
         <div className="flex max-xl:flex-wrap justify-center pt-20 2xl:gap-[27px] min-[1300px]:gap-[30px] gap-[50px]">
           {FUNZIONALITA_LIST.map((feature, index) => (
-            <div key={index} className='rounded-[20px] bg-white p-6 relative min-h-[260px] transition-all duration-300 hover:shadow-xl hover:z-10'>
+            <div key={index} className='rounded-[20px] bg-white p-6 relative min-h-[267px] transition-all duration-300 hover:shadow-xl hover:z-10'>
               <Image
                 className={`${feature.imgStyle} size-[160px]`}
                 src={feature.icon}
@@ -20,7 +20,7 @@ const FunzionalitaPrincipali = () => {
                 width={160}
                 height={160}
               />
-              <h5 className='text-dark-blue text-xl font-bold md:max-w-[212px] max-w-none pt-[89px] pb-2'>
+              <h5 className='text-dark-blue text-xl font-bold md:max-w-[212px] max-w-none pt-[83px] pb-2'>
                 {feature.title}
               </h5>
               <p className='font-medium text-base md:max-w-[212px] max-w-none text-dark-grey'>
