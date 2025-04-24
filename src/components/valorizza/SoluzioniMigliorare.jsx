@@ -10,11 +10,11 @@ const SoluzioniMigliorare = () => {
         <Image className="absolute 2xl:-bottom-[12%] lg:-bottom-[15%] md:-bottom-[10%] md:h-[136px] sm:h-[94px] h-[67px] max-[765px]:-bottom-[8%] max-[640px]:-bottom-[5%] max-[500px]:-bottom-[4%] w-full" src="/assets/images/png/Soluzioni-bottom-layer.png" alt="bottom-layer" width={1920} height={152} />
         <Image className="absolute h-auto left-0 w-[260px] xl:block hidden top-0" src="/assets/images/png/soluzioni-left-layer.png" alt="top-layer" width={1920} height={136} />
         <Image className="absolute h-auto right-0 2xl:top-[10%] 2xl:max-w-[379px] max-w-[250px] xl:block hidden" src="/assets/images/png/soluzioni-right-layer.png" alt="bottom-layer" width={1920} height={152} />
-        <div className="max-w-[1560px] mx-auto px-6">
+        <div className="max-w-[1560px] mx-auto px-6 max-sm:pb-3">
           <div className="flex max-lg:flex-col lg:gap-20 gap-10 max-xl:justify-center pt-10 lg:pb-[100px] mb:pb-20 relative z-10 max-w-[1408px] mx-auto">
             <Image className="xl:max-w-[656px] xl:h-[640px] lg:max-w-[427px] md:max-w-[467px] max-w-[350px] w-full md:h-[500px] max-lg:mx-auto" src="/assets/images/webp/soluzioni.webp" alt="soluzioni-image" width={656} height={640} />
             <div>
-              <Heading headingText="Soluzioni per migliorare il tuo lavoro" className="lg:!max-w-[465px] max-lg:!text-center max-sm:!text-left !max-w-none max-lg:!text-40 !leading-130 !text-yellow xl:!pb-10 !pb-6" />
+              <Heading headingText="Soluzioni per migliorare il tuo lavoro" className="lg:!max-w-[465px] max-lg:!text-center max-sm:!text-left !max-w-none max-lg:!text-40 !leading-130 !text-yellow xl:!pb-10 !pb-8" />
 
               <div>
                 {SOLUZIONI_LIST.map((item, index) => (
