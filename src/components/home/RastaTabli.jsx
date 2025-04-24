@@ -32,7 +32,7 @@ const RastaTabli = () => {
     return (
         <div className='bg-dark-blue relative max-md:overflow-hidden md:overflow-x-clip pt-[255px] md:pt-[455px] pb-[175px] lg:pb-[200px] 2xl:pb-[490px] mt-[-1px]'>
             <Image className='absolute top-[200px] md:hidden' height={1440} width={613} src={'/assets/images/png/sm-food-line.png'} alt='food cover line' />
-            <Image className='absolute left-[0px] max-xl:hidden top-[600px] 2xl:top-[520px] 2xl:h-[1100px] z-0' height={988} width={1000} src={'/assets/images/png/food-cover-line.png'} alt='line layer' />
+            <Image className='absolute left-[0px] max-xl:hidden top-[600px] 2xl:top-[520px] h-[700px] 2xl:h-[1100px] z-0' height={988} width={1000} src={'/assets/images/png/food-cover-line.png'} alt='line layer' />
             <Image className='w-full max-sm:h-[73px] absolute -top-1 -translate-y-0.5 z-10' height={136} width={1920} src={'/assets/images/png/more-info-bottom-layer.png'} alt='bottom layer' />
             <div className='absolute left-[-2%] top-10 md:-top-[50px] xl:-top-[100px] z-20'>
                 <Image src="/assets/images/png/phone-handing.png" alt='phone-handing' width={678} height={600} className='2xl:w-[678px] lg:w-[500px] md:w-[400px] w-[220px] max-md:h-[230px] object-cover' />
