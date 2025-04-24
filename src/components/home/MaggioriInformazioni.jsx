@@ -9,7 +9,7 @@ const MaggioriInformazioni = () => {
       <div className="bg-yellow relative overflow-x-clip -mt-0.5 pb-4 md:pb-20 xl:pb-[170px]">
         <div className='flex gap-[160px] max-sm:translate-y-[-92px]  max-md:flex-col max-sm:pb-0 max-xl:pb-16 max-lg:gap-4  max-2xl:px-5 max-w-[1400px] mx-auto sm:items-center sm:justify-between lg:justify-end md:pt-[110px]'>
           <div>
-            <Image className='2xl:h-[609px] max-lg:w-[320px] max-md:max-w-[320px] max-md:mx-auto relative z-30' height={609} width={508} src={'/assets/images/png/more-info-img.png'} alt='side img' />
+            <Image className='2xl:h-[609px] pointer-events-none max-lg:w-[320px] max-md:max-w-[320px] max-md:mx-auto relative z-30' height={609} width={508} src={'/assets/images/png/more-info-img.png'} alt='side img' />
           </div>
           <div className="mb-[-52px]">
             <Image className='absolute pointer-events-none -right-20 2xl:h-[780px] max-xl:hidden z-20 top-[230px]' height={780} width={1152} src={'/assets/images/png/more-information-side-line.png'} alt='side line' />
