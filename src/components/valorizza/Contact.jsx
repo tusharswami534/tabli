@@ -71,27 +71,27 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="rounded-lg w-full max-w-3xl relative z-10">
             <div className="grid md:grid-cols-2 gap-10">
               <div>
-                <InputField label="Nome" name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} />
-                {errors.nome && <p className="text-red-600 text-sm mt-2">{errors.nome}</p>}
+                <InputField label="Nome" name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} myClass="!relative"/>
+                {errors.nome && <p className="text-red-600 text-sm mt-2 absolute">{errors.nome}</p>}
               </div>
               <div>
-                <InputField label="Cognome" name="cognome" placeholder="Cognome" value={formData.cognome} onChange={handleChange} />
-                {errors.cognome && <p className="text-red-600 text-sm mt-2">{errors.cognome}</p>}
+                <InputField label="Cognome" name="cognome" placeholder="Cognome" value={formData.cognome} onChange={handleChange} myClass="!relative" />
+                {errors.cognome && <p className="text-red-600 text-sm mt-2 absolute">{errors.cognome}</p>}
               </div>
               <div>
                 <InputField label="Telefono" name="telefono" type="tel" placeholder="Telefono" value={formData.telefono}
-                  onChange={handleChange} />
-                {errors.telefono && <p className="text-red-600 text-sm mt-2">{errors.telefono}</p>}
+                  onChange={handleChange} myClass="!relative"/>
+                {errors.telefono && <p className="text-red-600 text-sm mt-2 absolute">{errors.telefono}</p>}
               </div>
               <div>
-                <InputField label="Email" name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-                {errors.email && <p className="text-red-600 text-sm mt-2">{errors.email}</p>}
+                <InputField label="Email" name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} myClass="!relative" />
+                {errors.email && <p className="text-red-600 text-sm mt-2 absolute">{errors.email}</p>}
               </div>
             </div>
             <div className="mt-10">
               <label htmlFor="messaggio" className="block font-bold mb-2">  Messaggio </label>
-              <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button bg-white placeholder:text-black text-black" value={formData.messaggio} onChange={handleChange} />
-              {errors.messaggio && <p className="text-red-600 text-sm mt-1">{errors.messaggio}</p>}
+              <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button bg-white placeholder:text-black text-black relative" value={formData.messaggio} onChange={handleChange} />
+              {errors.messaggio && <p className="text-red-600 text-sm mt-1 absolute">{errors.messaggio}</p>}
             </div>
             <div className="flex justify-center mt-10">
               <CustomButton type="submit" buttonName="INVIA MESSAGGIO" className="!text-white !bg-dark-blue !w-[169px] !h-[45px] cursor-pointer border-2 border-dark-blue hover:!bg-yellow !whitespace-nowrap flex justify-center items-center hover:!text-black transition-all duration-500 ease-linear" />

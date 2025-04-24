@@ -4,8 +4,13 @@ import { useEffect, useState } from 'react'; import Image from 'next/image'
 import Heading from '../custom-ui/Heading';
 import InputField from '../custom-ui/InputField';
 import CustomButton from '../custom-ui/CustomButton';
+import Swal from 'sweetalert2';
 
 const RastaTabli = () => {
+    const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 48);
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0 });
@@ -29,6 +34,24 @@ const RastaTabli = () => {
 
         return () => clearInterval(interval);
     }, []);
+    const handleEmailSubmit = (e) => {
+        e.preventDefault();
+
+        if (!emailRegex.test(email.trim())) {
+            setEmailError('Enter a valid email address.');
+            return;
+        }
+
+        setEmailError('');
+        Swal.fire({
+            title: 'Iscrizione riuscita!',
+            text: 'Grazie per esserti iscritto.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+        setEmail('');
+    };
+
     return (
         <div className='bg-dark-blue relative max-md:overflow-hidden md:overflow-x-clip pt-[255px] md:pt-[455px] 2xl:pt-[346px] pb-[175px] lg:pb-[200px] 2xl:pb-[490px] mt-[-1px]'>
             <Image className='absolute top-[200px] md:hidden' height={1440} width={613} src={'/assets/images/png/sm-food-line.png'} alt='food cover line' />
@@ -54,11 +77,36 @@ const RastaTabli = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="space-y-2 max-w-[345px] mx-auto">
-                        <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold">Email</label>
-                        <InputField placeholder="Inserisci la tua Email" type='email' myClass="!max-w-[345px] !mr-auto !flex !justify-start !text-dark-grey placeholder:!text-dark-grey" />
-                        <CustomButton buttonName="  ISCRIVITI ORA" className="md:!w-[344px] w-full h-[45px] !flex !justify-center !items-center !mt-6" />
-                    </div>
+                    <form onSubmit={handleEmailSubmit}>
+                        <div className="space-y-2 max-w-[345px] mx-auto">
+                            <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold">Email</label>
+
+                            <div className='relative'>
+                                <InputField
+                                    name="email"
+                                    placeholder="Inserisci la tua Email"
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => {
+                                        setEmail(e.target.value);
+                                        setEmailError('');
+                                    }}
+                                    myClass="!max-w-[345px] !mr-auto !flex !justify-start !relative !text-dark-grey placeholder:!text-dark-grey"
+                                />
+
+                                <p className={`text-red-600 text-sm  transition-all bottom-[-36%] absolute  duration-300 `}>
+                                    {emailError}
+                                </p>
+                            </div>
+
+                            <CustomButton
+                                type="submit"
+                                buttonName="ISCRIVITI ORA"
+                                className="md:!w-[344px] w-full h-[45px] !flex !justify-center !items-center !mt-6"
+                            />
+                        </div>
+                    </form>
+
                 </div>
             </div>
             <div className='absolute z-10 2xl:bottom-[-3%] xl:bottom-[-8%] md:bottom-[-6%] bottom-[-1%] sm:left-[9%] left-[14%] '>
