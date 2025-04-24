@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Heading from '../custom-ui/Heading'
 import Paragraph from '../custom-ui/Paragraph'
@@ -10,6 +10,8 @@ import 'swiper/css/pagination'
 import { BENEFITS_LIST } from '../../utils/helper'
 
 const VantaggiPerTe = () => {
+  const [activeIndex, setActiveIndex] = useState(1)
+
   return (
     <div className='relative'>
       <div className="bg-dark-blue -scale-y-0.5">
@@ -21,19 +23,22 @@ const VantaggiPerTe = () => {
           <Heading className='text-center' headingText='Vantaggi per Te' />
         </div>
         <div className="max-w-[1560px] items-center justify-center overflow-x-auto scrollbar-hide mx-auto flex">
-          <div className="flex items-center justify-center max-2xl:hidden gap-x-3 py-[89px] h-[588px] ">
-            {BENEFITS_LIST.map((item, index) => (
-              <div key={index} className="bg-white group rounded-3xl transition-all duration-300 overflow-hidden hover:w-[300px] 2xl:min-h-[380px] w-[240px]">
-                <Image className='w-[240px] h-[300px] group-hover:w-[300px] transition-all duration-300' height={300} width={240} src={item.image} alt='benefits' />
-                <div className="flex flex-col py-6 px-4 gap-2">
-                  <p className='text-dark-blue font-bold leading-119 text-xl text-center'>{item.title}</p>
-                  <div className="h-0 overflow-hidden group-hover:h-[176px] transition-all duration-300 flex flex-col gap-2">
-                    <Paragraph className='!text-light-gray !leading-[130%]' paragraphText={item.description} />
-                    <Paragraph className='!text-light-gray !leading-[130%]' paragraphText={item.descriptionTwo} />
+          <div className="flex items-center justify-center max-2xl:hidden gap-x-3 py-[89px] h-[588px]">
+            {BENEFITS_LIST.map((item, index) => {
+              const isActive = index === activeIndex
+              return (
+                <div key={index} onMouseEnter={() => setActiveIndex(index)} className={`bg-white group rounded-3xl transition-all duration-300 overflow-hidden 2xl:min-h-[380px] ${isActive ? 'w-[300px]' : 'w-[240px]'}`}>
+                  <Image className={`h-[300px] transition-all duration-300 ${isActive ? 'w-[300px]' : 'w-[240px]'}`} height={300} width={240} src={item.image} alt='benefits' />
+                  <div className="flex flex-col py-6 px-4 gap-2">
+                    <p className='text-dark-blue font-bold leading-119 text-xl text-center'>{item.title}</p>
+                    <div className={`transition-all duration-300 flex flex-col gap-2 overflow-hidden ${isActive ? 'h-[176px]' : 'h-0'}`}>
+                      <Paragraph className='!text-light-gray !leading-[130%]' paragraphText={item.description} />
+                      <Paragraph className='!text-light-gray !leading-[130%]' paragraphText={item.descriptionTwo} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
         <div className="2xl:hidden overflow-hidden">
@@ -44,21 +49,11 @@ const VantaggiPerTe = () => {
             slidesPerGroup={1}
             loop={true}
             breakpoints={{
-              1100: {
-                slidesPerView: 4, centeredSlides: false,
-              },
-              1024: {
-                slidesPerView: 3, centeredSlides: false,
-              },
-              768: {
-                slidesPerView: 2.2, spaceBetween: 24,
-              },
+              1100: { slidesPerView: 4, centeredSlides: false },
+              1024: { slidesPerView: 3, centeredSlides: false },
+              768: { slidesPerView: 2.2, spaceBetween: 24 },
               640: { slidesPerView: 1.6 },
-              320: {
-                slidesPerView: 1.3,
-                spaceBetween: 24,
-                centeredSlides: true,
-              },
+              320: { slidesPerView: 1.3, spaceBetween: 24, centeredSlides: true },
             }}
             className="flex items-center justify-center max-w-[1320px] mx-auto py-[89px] pb-[40px]">
             {BENEFITS_LIST.map((item, index) => (
@@ -73,7 +68,7 @@ const VantaggiPerTe = () => {
           </Swiper>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 

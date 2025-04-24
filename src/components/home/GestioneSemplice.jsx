@@ -12,11 +12,11 @@ const GestioneSemplice = () => {
         <div className="max-sm:px-5">
           <Image className='absolute left-[-35%] max-lg:hidden xl:left-[-20%] 2xl:left-0 top-[150px] xl:top-[200px] 2xl:top-[280px] pointer-events-none' height={759} width={1030} src={'/assets/images/png/gestione-side-line.png'} alt='side line' />
           <div className="lg:max-w-[526px] max-w-[350px] max-sm:max-w-[313px]">
-            <p className='lg:text-40 text-32 max-w-[500px] font-black text-white leading-119 pb-4 lg:pb-10'>Gestione Semplice, Servizio Efficiente</p>
+            <p className='lg:text-40 text-32 max-w-[500px] font-black text-white leading-119 pb-4 lg:pb-11'>Gestione Semplice, Servizio Efficiente</p>
             <p className='text-32 font-black leading-100 text-white max-lg:hidden'>Un Servizio Fluido e Intuitivo</p>
-            <Paragraph className='pt-4' paragraphText={'Tabli è la piattaforma pensata per semplificare la gestione delle attività, indipendentemente dalla loro dimensione o settore.'} />
-            <Paragraph className='pt-4' paragraphText={'Aiuta a organizzare ordini, migliorare l’esperienza dei clienti e ottimizzare i tempi, rendendo ogni fase del lavoro più fluida ed efficiente.'} />
-            <Paragraph className='pt-4' paragraphText={'Versatile e personalizzabile, Tabli si adatta a bar, lidi, hotel, centri estetici e molto altro, accompagnandoti nel processo di digitalizzazione.'} />
+            <Paragraph className='pt-4 !font-medium' paragraphText={'Tabli è la piattaforma pensata per semplificare la gestione delle attività, indipendentemente dalla loro dimensione o settore.'} />
+            <Paragraph className='pt-4 !font-medium' paragraphText={'Aiuta a organizzare ordini, migliorare l’esperienza dei clienti e ottimizzare i tempi, rendendo ogni fase del lavoro più fluida ed efficiente.'} />
+            <Paragraph className='pt-4 !font-medium' paragraphText={'Versatile e personalizzabile, Tabli si adatta a bar, lidi, hotel, centri estetici e molto altro, accompagnandoti nel processo di digitalizzazione.'} />
             <CustomButton className='!text-dark-grey mt-10 max-sm:w-full' buttonName={'Maggiori Informazioni'} />
           </div>
         </div>
