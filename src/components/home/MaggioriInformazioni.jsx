@@ -17,7 +17,7 @@ const MaggioriInformazioni = () => {
               <p className='lg:text-40 italic text-dark-grey text-32 max-w-[500px] font-black leading-119 pb-4 lg:pb-6'>Vuoi far crescere la tua attività?</p>
               <p className='lg:text-32 md:italic text-dark-grey text-xl font-bold md:font-black leading-119 '>Semplifica la gestione, migliora l’esperienza dei tuoi clienti</p>
               <Paragraph className='pt-4 !text-dark-grey' paragraphText={'Tabli è la soluzione pensata per supportare bar, hotel, lidi e tutte le attività locali che vogliono digitalizzare i propri servizi. Con un’interfaccia intuitiva e strumenti su misura, potrai gestire ordini, prenotazioni e richieste in modo efficiente, offrendo ai tuoi clienti un servizio moderno e senza attese.'} />
-              <CustomButton className='!text-white mt-10 !bg-dark-blue max-sm:w-full hover:!bg-white hover:!text-dark-blue' buttonName={'Maggiori Informazioni'} />
+              <CustomButton className='!text-white mt-10 !py-[10.5px] !bg-dark-blue max-sm:w-full hover:!bg-white hover:!text-dark-blue' buttonName={'Maggiori Informazioni'} />
             </div>
           </div>
         </div>

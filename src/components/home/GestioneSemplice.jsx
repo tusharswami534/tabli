@@ -17,7 +17,7 @@ const GestioneSemplice = () => {
             <Paragraph className='pt-4 !font-medium' paragraphText={'Tabli è la piattaforma pensata per semplificare la gestione delle attività, indipendentemente dalla loro dimensione o settore.'} />
             <Paragraph className='pt-4 !font-medium' paragraphText={'Aiuta a organizzare ordini, migliorare l’esperienza dei clienti e ottimizzare i tempi, rendendo ogni fase del lavoro più fluida ed efficiente.'} />
             <Paragraph className='pt-4 !font-medium' paragraphText={'Versatile e personalizzabile, Tabli si adatta a bar, lidi, hotel, centri estetici e molto altro, accompagnandoti nel processo di digitalizzazione.'} />
-            <CustomButton className='!text-dark-grey mt-10 max-sm:w-full' buttonName={'Maggiori Informazioni'} />
+            <CustomButton className='!text-dark-grey !py-[10.5px] mt-10 max-sm:w-full' buttonName={'Maggiori Informazioni'} />
           </div>
         </div>
         <div>

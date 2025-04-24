@@ -4,13 +4,8 @@ import { useEffect, useState } from 'react'; import Image from 'next/image'
 import Heading from '../custom-ui/Heading';
 import InputField from '../custom-ui/InputField';
 import CustomButton from '../custom-ui/CustomButton';
-import Swal from 'sweetalert2';
 
 const RastaTabli = () => {
-    const [email, setEmail] = useState('');
-    const [emailError, setEmailError] = useState('');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 48);
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0 });
@@ -34,26 +29,8 @@ const RastaTabli = () => {
 
         return () => clearInterval(interval);
     }, []);
-    const handleEmailSubmit = (e) => {
-        e.preventDefault();
-
-        if (!emailRegex.test(email.trim())) {
-            setEmailError('Enter a valid email address.');
-            return;
-        }
-
-        setEmailError('');
-        Swal.fire({
-            title: 'Iscrizione riuscita!',
-            text: 'Grazie per esserti iscritto.',
-            icon: 'success',
-            confirmButtonText: 'OK'
-        });
-        setEmail('');
-    };
-
     return (
-        <div className='bg-dark-blue relative max-md:overflow-hidden md:overflow-x-clip pt-[255px] md:pt-[455px] 2xl:pt-[346px] pb-[175px] lg:pb-[200px] 2xl:pb-[490px] mt-[-1px]'>
+        <div className='bg-dark-blue relative max-md:overflow-hidden md:overflow-x-clip pt-[255px] md:pt-[455px] pb-[175px] lg:pb-[200px] 2xl:pb-[490px] mt-[-1px]'>
             <Image className='absolute top-[200px] md:hidden' height={1440} width={613} src={'/assets/images/png/sm-food-line.png'} alt='food cover line' />
             <Image className='absolute left-[0px] max-xl:hidden top-[600px] 2xl:top-[520px] h-[700px] 2xl:h-[1200px] z-0' height={1100} width={1000} src={'/assets/images/png/food-cover-line.png'} alt='line layer' />
             <Image className='w-full max-sm:h-[73px] absolute -top-1 -translate-y-0.5 z-10' height={136} width={1920} src={'/assets/images/png/more-info-bottom-layer.png'} alt='bottom layer' />
@@ -79,36 +56,12 @@ const RastaTabli = () => {
                             </div>
                         ))}
                     </div>
-                    <form onSubmit={handleEmailSubmit}>
-                        <div className="space-y-2 max-w-[345px] mx-auto">
-                            <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold">Email</label>
-
-                            <div className='relative'>
-                                <InputField
-                                    name="email"
-                                    placeholder="Inserisci la tua Email"
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => {
-                                        setEmail(e.target.value);
-                                        setEmailError('');
-                                    }}
-                                    myClass="!max-w-[345px] !mr-auto !flex !justify-start !relative !text-dark-grey placeholder:!text-dark-grey"
-                                />
-
-                                <p className={`text-red-600 text-sm  transition-all bottom-[-36%] absolute  duration-300 `}>
-                                    {emailError}
-                                </p>
-                            </div>
-
-                            <CustomButton
-                                type="submit"
-                                buttonName="ISCRIVITI ORA"
-                                className="md:!w-[344px] w-full h-[45px] !flex !justify-center !items-center !mt-6"
-                            />
-                        </div>
-                    </form>
-
+                    <div className="space-y-2 max-w-[345px] mx-auto">
+                        <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold relative"><span className='relative z-10'>Email</span> <span className="absolute top-0.5 left-[1px] z-0 text-teal-900 font-extrabold opacity-30">
+                            Email</span> </label>
+                        <InputField placeholder="Inserisci la tua Email" type='email' myClass="!max-w-[345px] !mr-auto !flex !justify-start !text-dark-grey placeholder:!text-dark-grey" />
+                        <CustomButton buttonName="  ISCRIVITI ORA" className="md:!w-[344px] w-full h-[45px] !flex !justify-center !items-center !mt-6" />
+                    </div>
                 </div>
             </div>
             <div className='absolute z-10 2xl:bottom-[-3%] xl:bottom-[-8%] md:bottom-[-6%] bottom-[-1%] sm:left-[7%] left-[14%] '>
