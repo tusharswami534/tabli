@@ -1,12 +1,19 @@
 'use client';
 
-import { useEffect, useState } from 'react'; import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'; import Image from 'next/image'
 import Heading from '../custom-ui/Heading';
 import InputField from '../custom-ui/InputField';
 import CustomButton from '../custom-ui/CustomButton';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const RastaTabli = () => {
     const targetDate = new Date();
+    const form = useRef();
+    const [emial, setEmail] = useState('');
+    const [error, setError] = useState(false);
+    const EmailRegex =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     targetDate.setDate(targetDate.getDate() + 48);
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0 });
 
@@ -28,7 +35,42 @@ const RastaTabli = () => {
         }, 1000);
 
         return () => clearInterval(interval);
+
+
     }, []);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        if (!EmailRegex.test(emial)) {
+            setError(true);
+            return;
+        }
+
+        setError(false);
+
+        emailjs.sendForm('service_ct3vbis', 'template_9glzkno', form.current, {
+            publicKey: 'aKxsD9MpKuUVpMSgP',
+        }).then(
+            () => {
+                console.log('SUCCESS!');
+                Swal.fire({
+                    title: "Iscrizione completata!",
+                    text: "La tua email è stata registrata correttamente.",
+                    icon: "success"
+                });
+            },
+            (error) => {
+                console.log('FAILED...', error.text);
+                Swal.fire({
+                    title: "Errore",
+                    text: "C'è stato un errore durante l'invio. Riprova.",
+                    icon: "error"
+                });
+            }
+        );
+    };
+
     return (
         <div className='bg-dark-blue relative max-md:overflow-hidden md:overflow-x-clip pt-[255px] md:pt-[455px] pb-[175px] lg:pb-[200px] 2xl:pb-[490px] mt-[-1px]'>
             <Image className='absolute top-[200px] md:hidden' height={1440} width={613} src={'/assets/images/png/sm-food-line.png'} alt='food cover line' />
@@ -56,12 +98,17 @@ const RastaTabli = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="space-y-2 max-w-[345px] mx-auto">
+                    <form ref={form} onSubmit={sendEmail} className="space-y-2 max-w-[345px] mx-auto">
                         <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold relative"><span className='relative z-10'>Email</span> <span className="absolute top-0.5 left-[1px] z-0 text-teal-900 font-extrabold opacity-30">
                             Email</span> </label>
-                        <InputField placeholder="Inserisci la tua Email" type='email' myClass="!max-w-[345px] !mr-auto !flex !justify-start !text-dark-grey placeholder:!text-dark-grey" />
+                        <InputField placeholder="Inserisci la tua Email" onChange={(e) => {
+                            const value = e.target.value;
+                            setEmail(value);
+                            if (EmailRegex.test(value)) { setError(false); }
+                        }} type='email' myClass="!max-w-[345px] !mr-auto !flex !justify-start !text-dark-grey placeholder:!text-dark-grey" />
+                        <p className='text-red-500 text-left'>{error && 'Inserisci un indirizzo email valido'}</p>
                         <CustomButton buttonName="  ISCRIVITI ORA" className="md:!w-[344px] w-full h-[45px] !flex !justify-center !items-center !mt-6" />
-                    </div>
+                    </form>
                 </div>
             </div>
             <div className='absolute z-10 2xl:bottom-[-3%] xl:bottom-[-8%] md:bottom-[-6%] bottom-[-1%] sm:left-[7%] left-[14%] '>
