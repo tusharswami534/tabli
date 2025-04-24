@@ -30,7 +30,7 @@ const RastaTabli = () => {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div className='bg-dark-blue relative max-md:overflow-hidden md:overflow-x-clip pt-[255px] md:pt-[455px] pb-[175px] lg:pb-[200px] 2xl:pb-[490px] mt-[-1px]'>
+        <div className='bg-dark-blue relative max-md:overflow-hidden md:overflow-x-clip pt-[255px] md:pt-[455px] 2xl:pt-[346px] pb-[175px] lg:pb-[200px] 2xl:pb-[490px] mt-[-1px]'>
             <Image className='absolute top-[200px] md:hidden' height={1440} width={613} src={'/assets/images/png/sm-food-line.png'} alt='food cover line' />
             <Image className='absolute left-[0px] max-xl:hidden top-[600px] 2xl:top-[520px] h-[700px] 2xl:h-[1100px] z-0' height={988} width={1000} src={'/assets/images/png/food-cover-line.png'} alt='line layer' />
             <Image className='w-full max-sm:h-[73px] absolute -top-1 -translate-y-0.5 z-10' height={136} width={1920} src={'/assets/images/png/more-info-bottom-layer.png'} alt='bottom layer' />
@@ -42,7 +42,7 @@ const RastaTabli = () => {
             </div>
             <div className="container max-w-[1200px] mx-auto md:px-4 relative z-30">
                 <div className="text-white text-center p-6 rounded-lg max-w-[670px] max-xl:mx-auto ml-auto md:space-y-6">
-                    <Heading headingText="Resta aggiornato su Tabli, il lancio è dietro l’angolo!" className="!text-white !max-w-[622px]" />
+                    <Heading headingText="Resta aggiornato su Tabli, il lancio è dietro l’angolo!" className="!text-white !max-w-[622px] !leading-normal" />
                     <div className="flex justify-center gap-2 md:gap-4 mb-10 mt-4">
                         {[{ label: 'Giorni', value: timeLeft.days },
                         { label: 'Ore', value: timeLeft.hours },
