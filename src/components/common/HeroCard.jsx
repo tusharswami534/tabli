@@ -9,35 +9,35 @@ const HeroCard = ({ title, description, icon }) => {
         <>
             <div className={`${path === '/' ? '' : 'flex justify-center'}`}>
                 <div
-                    className={`rounded-[20px] flex justify-center items-center transition-all duration-300 flex-col min-h-[270px] relative p-2 shadow-[0px_8px_16px_0px_#00000029] ${path === '/' ? 'max-md:min-h-[170px] max-w-[330px] bg-light-blue  ease-linear hover:shadow-[0px_5px_30px_-5px_#fff]' : 'bg-white h-full max-sm:h-[275px] w-full max-sm:max-w-[340px'}`}
+                    className={`rounded-[20px] flex justify-center items-center transition-all duration-300 flex-col min-h-[270px] relative p-2 shadow-[0px_8px_16px_0px_#00000029] ${path === '/' ? 'max-md:min-h-[170px] max-w-[330px] bg-light-blue  ease-linear hover:shadow-[0px_5px_30px_-5px_#fff]' : 'bg-white h-full max-sm:h-[275px] w-full max-sm:!max-w-[340px]'}`}
                 >
                     <Image
                         src="/assets/images/webp/fram.webp"
                         alt="img"
                         width={30}
                         height={30}
-                        className="absolute top-2 max-md:size-[20px] left-2"
+                        className={`absolute top-2 left-2 ${path === '/' && ' max-md:size-[20px]' }`}
                     />
                     <Image
                         src="/assets/images/webp/fram.webp"
                         alt="img"
                         width={30}
                         height={30}
-                        className="absolute top-2 max-md:size-[20px] rotate-90 right-2 "
+                        className={`absolute top-2 rotate-90 right-2  ${path === '/' && ' max-md:size-[20px]' }`}
                     />
                     <Image
                         src="/assets/images/webp/fram.webp"
                         alt="img"
                         width={30}
                         height={30}
-                        className="absolute bottom-2 max-md:size-[20px] rotate-180 right-2 "
+                        className={`absolute bottom-2 rotate-180 right-2 ${path === '/' && ' max-md:size-[20px]' } `}
                     />
                     <Image
                         src="/assets/images/webp/fram.webp"
                         alt="img"
                         width={30}
                         height={30}
-                        className="absolute bottom-2 max-md:size-[20px] -rotate-90 left-2 "
+                        className={`absolute bottom-2 -rotate-90 left-2 ${path === '/' && ' max-md:size-[20px]' }`}
                     />
                     <div className="xl:p-7 lg:p-3 p-2 flex justify-center items-center flex-col">
                         <Image src={icon} width={50} height={50} className='max-md:size-[38px] ' alt="icon" />

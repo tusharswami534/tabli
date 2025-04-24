@@ -12,7 +12,7 @@ import Icons from "./icons";
 const HeroCardData = () => {
     const path = usePathname();
     return (
-        <div id="cosa-potrai" className={` !z-0 relative ${path === '/' ? 'pt-20 z-10 px-2.5 max-xl:pt-16 max-lg:pt-14 max-md:pt-12 pb-[94px] max-lg:pb-20 max-sm:pb-[106px] relative' : 'pb-[250px] max-sm:pb-[150px] px-4 pt-24 max-sm:pt-20'}`}>
+        <div id="cosa-potrai" className={` !z-0 relative ${path === '/' ? 'pt-20 z-10 px-2.5 max-xl:pt-16 max-lg:pt-14 max-md:pt-12 pb-[94px] max-lg:pb-20 max-sm:pb-[106px] relative' : 'pb-[250px] max-sm:pb-[190px] px-4 pt-24 max-sm:pt-20'}`}>
             {path === "/" && <>
                 <span className=" absolute top-[-7%] sm:hidden w-full left-0">
                     <Icons icon='comeSmVector' />
@@ -23,8 +23,8 @@ const HeroCardData = () => {
                     Cosa potrai fare con Tabli
                 </h3>) : <>
                     <div className="w-full max-w-[700px] mx-auto mb-14">
-                        <h3 className="text-40 max-sm:min-w-[371px] mx-auto max-lg:text-4xl max-sm:text-32 leading-130 font-black italic text-dark-blue text-center">Come Funziona</h3>
-                        <Paragraph className={'!text-dark-grey mt-2 text-center'} paragraphText={'Con Tabli puoi caricare in autonomia il tuo menù, listino o catalogo, aggiornare disponibilità e prezzi in tempo reale, e offrire un esperienza fluida ai tuoi clienti senza dover installare sistemi complessi'} />
+                        <h3 className="text-40 max-sm:min-w-[371px] mx-auto leading-130 font-black italic text-dark-blue text-center">Come Funziona</h3>
+                        <Paragraph className={'!text-dark-grey mt-2 max-[400px]:max-w-[345px] mx-auto text-center'} paragraphText={'Con Tabli puoi caricare in autonomia il tuo menù, listino o catalogo, aggiornare disponibilità e prezzi in tempo reale, e offrire un esperienza fluida ai tuoi clienti senza dover installare sistemi complessi'} />
                     </div>
                 </>}
                 <div
