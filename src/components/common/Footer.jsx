@@ -12,7 +12,7 @@ const Footer = () => {
         <div className='bg-gray'>
           <div className="container mx-auto px-4 py-7 sm:pt-20 sm:pb-10">
            <Link href={'/'}> <Image src="/assets/images/png/footer-logo.png" alt='footer-logo' width={123} height={33} className='w-[123px] pb-2 sm:pb-6 flex mx-auto' /></Link>
-            <p className='text-base italic font-[900] text-white text-center'>Tutti i diritti riservati</p>
+            <p className='text-base italic font-[700] text-white text-center'>Tutti i diritti riservati</p>
           </div>
         </div>
      </div>
