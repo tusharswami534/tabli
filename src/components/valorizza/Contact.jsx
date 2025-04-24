@@ -67,7 +67,7 @@ const Contact = () => {
         <div className='absolute bottom-[5%] lg:block hidden '>
           <Image src="/assets/images/png/contact-outline.png" alt='contact-outline' width={2560} height={1080} className='lg:h-[870px] 2xl:h-[1000px] pointer-events-none' />
         </div>
-        <div className="container mx-auto px-4 max-w-[760px]">
+        <div className="container mx-auto px-[21px] max-w-[760px]">
           <form onSubmit={handleSubmit} className="rounded-lg w-full max-w-3xl relative z-10">
             <div className="grid md:grid-cols-2 gap-10">
               <div>
@@ -88,7 +88,7 @@ const Contact = () => {
                 {errors.email && <p className="text-red-600 text-sm mt-2 absolute">{errors.email}</p>}
               </div>
             </div>
-            <div className="mt-10 max-sm:max-w-[350px] mx-auto">
+            <div className="mt-10  mx-auto">
               <label htmlFor="messaggio" className="block font-bold mb-2 text-dark-grey text-xl">  Messaggio </label>
               <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button resize-none bg-white text-base placeholder:text-gray text-gray relative" value={formData.messaggio} onChange={handleChange} />
               {errors.messaggio && <p className="text-red-600 text-sm mt-1 absolute">{errors.messaggio}</p>}
