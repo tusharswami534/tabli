@@ -59,7 +59,7 @@ const Contact = () => {
 
   return (
     <div id='contatti' className='bg-yellow'>
-      <div className=' md:pt-[200px] pt-[140px] lg:pb-[390px] pb-[200px] relative max-w-[1920px] mx-auto'>
+      <div className=' md:pt-[200px] pt-[140px] xl:pb-[390px] lg:pb-[160px] pb-[200px] relative max-w-[1920px] mx-auto'>
         <div className='absolute z-10 2xl:bottom-[-15%] xl:bottom-[-12%] lg:bottom-[-10%] md:bottom-[-9%] bottom-[-3%] sm:left-[9%] left-[14%] '>
           <Image src="/assets/images/webp/menu.webp" alt='menu' width={729} height={517} className='2xl:w-[729px] xl:w-[600px] lg:w-[300px] md:w-[250px] w-[236px] pointer-events-none' />
         </div>
@@ -88,7 +88,7 @@ const Contact = () => {
                 {errors.email && <p className="text-red-600 text-sm mt-2 absolute">{errors.email}</p>}
               </div>
             </div>
-            <div className="mt-10 max-sm:w-[350px] mx-auto">
+            <div className="mt-10 max-sm:max-w-[350px] mx-auto">
               <label htmlFor="messaggio" className="block font-bold mb-2 text-dark-grey text-xl">  Messaggio </label>
               <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button resize-none bg-white text-base placeholder:text-gray text-gray relative" value={formData.messaggio} onChange={handleChange} />
               {errors.messaggio && <p className="text-red-600 text-sm mt-1 absolute">{errors.messaggio}</p>}

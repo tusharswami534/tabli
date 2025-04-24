@@ -1,6 +1,6 @@
 const InputField = ({ label, name, type = "text", placeholder,  value,  onChange, myClass}) => {
     return (
-        <div className="max-sm:w-[350px] mx-auto">
+        <div className="max-sm:max-w-[350px]  mx-auto">
             <label htmlFor={name} className="block text-xl font-bold mb-2 text-dark-grey">
                 {label}
             </label>
@@ -11,7 +11,7 @@ const InputField = ({ label, name, type = "text", placeholder,  value,  onChange
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}
-                className={`w-full px-4 py-[19.5px] flex mx-auto max-sm:w-[350px] text-base rounded-[8px] bg-white shadow-common-button  text-gray placeholder:text-gray focus:outline-none ${myClass}`}
+                className={`w-full px-4 py-[19.5px] flex mx-auto max-sm:max-w-[350px] h-[60px] text-base rounded-[8px] bg-white shadow-common-button  text-gray placeholder:text-gray focus:outline-none ${myClass}`}
             />
         </div>
     );
