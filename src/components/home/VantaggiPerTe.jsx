@@ -28,7 +28,7 @@ const VantaggiPerTe = () => {
               const isActive = index === activeIndex
               return (
                 <div key={index} onMouseEnter={() => setActiveIndex(index)} className={`bg-white group rounded-3xl transition-all duration-300 overflow-hidden 2xl:min-h-[380px] ${isActive ? 'w-[300px]' : 'w-[240px]'}`}>
-                  <Image className={`h-[300px] transition-all duration-300 ${isActive ? 'w-[300px]' : 'w-[240px]'}`} height={300} width={240} src={item.image} alt='benefits' />
+                  <Image className={`h-[300px] pointer-events-none transition-all duration-300 ${isActive ? 'w-[300px]' : 'w-[240px]'}`} height={300} width={240} src={item.image} alt='benefits' />
                   <div className="flex flex-col py-6 px-4 gap-2">
                     <p className='text-dark-blue font-bold leading-119 text-xl text-center'>{item.title}</p>
                     <div className={`transition-all duration-300 flex flex-col gap-2 overflow-hidden ${isActive ? 'h-[176px]' : 'h-0'}`}>
@@ -58,7 +58,7 @@ const VantaggiPerTe = () => {
             className="flex items-center justify-center max-w-[1320px] mx-auto py-[89px] pb-[40px]">
             {BENEFITS_LIST.map((item, index) => (
               <SwiperSlide key={index} className="bg-white group rounded-3xl transition-all duration-300 overflow-hidden max-w-[300px] w-full">
-                <Image className='w-[300px] max-md:h-[300px]' height={300} width={240} src={item.image} alt='benefits' />
+                <Image className='w-[300px] pointer-events-none max-md:h-[300px]' height={300} width={240} src={item.image} alt='benefits' />
                 <div className="flex flex-col py-6 px-6 md:px-4 gap-2">
                   <p className='text-dark-blue font-bold leading-119 text-xl'>{item.title}</p>
                   <Paragraph className='!text-light-gray !leading-[130%]' paragraphText={item.description} />
