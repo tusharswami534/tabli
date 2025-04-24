@@ -88,7 +88,7 @@ const Contact = () => {
                 {errors.email && <p className="text-red-600 text-sm mt-2 absolute">{errors.email}</p>}
               </div>
             </div>
-            <div className="mt-10 max-sm:w-[350px] mx-auto">
+            <div className="mt-10 max-sm:max-w-[350px] mx-auto">
               <label htmlFor="messaggio" className="block font-bold mb-2 text-dark-grey text-xl">  Messaggio </label>
               <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button resize-none bg-white text-base placeholder:text-gray text-gray relative" value={formData.messaggio} onChange={handleChange} />
               {errors.messaggio && <p className="text-red-600 text-sm mt-1 absolute">{errors.messaggio}</p>}
