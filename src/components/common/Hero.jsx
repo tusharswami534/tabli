@@ -67,7 +67,7 @@ const Hero = () => {
                             width={197}
                             height={365}
                             sizes="100vw"
-                            className="duration-400 w-[197px] h-[365px] max-sm:w-[137px] max-sm:h-[254px] relative"
+                            className="duration-400 w-[197px] hero-images h-[365px] max-sm:w-[137px] max-sm:h-[254px] relative"
                           />
                         </div>
                       </SwiperSlide>
