@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import { CONTENT_LIST } from '../../utils/helper'
+import { SOLUZIONI_LIST } from '../../utils/helper'
 import Heading from '../custom-ui/Heading'
 const SoluzioniMigliorare = () => {
   return (
     <div>
       <div className="bg-dark-blue relative -mt-1 md:pt-10">
-        <Image className="absolute xl:-top-[13%] lg:top-[-15%] md:-top-[11%] sm:-top-[9%] top-[-5%] md:h-[136px] sm:h-[94px] h-[67px]  w-full" src="/assets/images/png/Soluzioni-top-layer.png" alt="top-layer" width={1920} height={136} />
+        <Image className="absolute xl:-top-[13%] lg:top-[-15%] md:-top-[11%] sm:-top-[9%] max-sm:top-[-5%] max-[700px]:top-[-5%]] md:h-[136px] sm:h-[94px] h-[67px]  w-full" src="/assets/images/png/Soluzioni-top-layer.png" alt="top-layer" width={1920} height={136} />
         <Image className="absolute 2xl:-bottom-[12%] lg:-bottom-[15%] md:-bottom-[10%] md:h-[136px] sm:h-[94px] h-[67px] max-[765px]:-bottom-[8%] max-[640px]:-bottom-[5%] max-[500px]:-bottom-[4%] w-full" src="/assets/images/png/Soluzioni-bottom-layer.png" alt="bottom-layer" width={1920} height={152} />
         <Image className="absolute h-auto left-0 w-[260px] xl:block hidden top-[5%]" src="/assets/images/png/soluzioni-left-layer.png" alt="top-layer" width={1920} height={136} />
         <Image className="absolute h-auto right-0 2xl:top-[10%] 2xl:max-w-[379px] max-w-[250px] xl:block hidden" src="/assets/images/png/soluzioni-right-layer.png" alt="bottom-layer" width={1920} height={152} />
@@ -17,7 +17,7 @@ const SoluzioniMigliorare = () => {
               <Heading headingText="Soluzioni per migliorare il tuo lavoro" className="lg:!max-w-[465px] max-lg:!text-center max-sm:!text-left !max-w-none max-lg:!text-40 !leading-130 !text-yellow xl:!pb-10 !pb-6" />
 
               <div>
-                {CONTENT_LIST.map((item, index) => (
+                {SOLUZIONI_LIST.map((item, index) => (
                   <div key={index} className="pb-8">
                     <h4 className="text-26 font-bold text-white italic max-lg:text-center max-sm:text-left max-sm:pb-3 !leading-130">
                       {item.title}
