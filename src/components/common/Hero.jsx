@@ -11,14 +11,15 @@ import "swiper/css";
 import { HERO_SWIPER_DATA } from "src/utils/helper";
 import Image from "next/image";
 import HeroCardData from "./HeroCardData";
+import { Autoplay } from 'swiper/modules';
 
 
 const Hero = () => {
   const path = usePathname()
   return (
     <div className={` pb-[72px] max-md:pb-0 overflow-hidden relative ${path === '/' ? 'bg-dark-blue' : '!bg-yellow'}`}>
-      <span className=" absolute right-0 max-lg:hidden pointer-events-none top-[186px]"><Icons icon='heroRightVector' /></span>
-      <span className=" absolute left-0 max-lg:hidden pointer-events-none top-[75%] -translate-y-1/2"><Icons icon='heroLeftVector' /></span>
+      <span className=" absolute right-0 max-lg:hidden pointer-events-none top-[186px]"><Icons className={path !== '/' && 'stroke-dark-blue'} icon='heroRightVector' /></span>
+      <span className=" absolute left-0 max-lg:hidden pointer-events-none top-[75%] -translate-y-1/2"><Icons className={path !== '/' && 'stroke-dark-blue'} icon='heroLeftVector' /></span>
       <span className=" absolute left-0 lg:hidden pointer-events-none top-[88px] w-full"><Icons className={'w-full'} icon='heroSmVector' /></span>
       <Nav />
       <div className='flex w-full relative pt-[62px] pb-[134px] max-md:pt-20 max-md:pb-0'>
@@ -42,6 +43,11 @@ const Hero = () => {
                   slidesPerView={2.5}
                   spaceBetween={30}
                   centeredSlides={true}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  modules={[Autoplay]}
                   loop={true}
                   breakpoints={{
                     439: {

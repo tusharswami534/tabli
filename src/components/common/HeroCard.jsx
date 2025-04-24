@@ -7,9 +7,9 @@ const HeroCard = ({ title, description, icon }) => {
     const path = usePathname()
     return (
         <>
-            <div>
+            <div className={`${path === '/' ? '' : 'flex justify-center'}`}>
                 <div
-                    className={`rounded-[20px] max-w-[330px] flex justify-center items-center transition-all duration-300 flex-col min-h-[270px] relative p-2 shadow-[0px_8px_16px_0px_#00000029] ${path === '/' ? 'max-md:min-h-[170px] bg-light-blue hover:shadow-[0px_8px_16px_0px_#fff]' : 'bg-white'}`}
+                    className={`rounded-[20px] flex justify-center items-center transition-all duration-300 flex-col min-h-[270px] relative p-2 shadow-[0px_8px_16px_0px_#00000029] ${path === '/' ? 'max-md:min-h-[170px] max-w-[330px] bg-light-blue  ease-linear hover:shadow-[0px_5px_30px_-5px_#fff]' : 'bg-white h-full max-sm:h-[275px] w-full max-sm:max-w-[340px'}`}
                 >
                     <Image
                         src="/assets/images/webp/fram.webp"

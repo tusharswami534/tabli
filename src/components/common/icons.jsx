@@ -51,14 +51,14 @@ const Icons = ({ icon, className }) => {
                 <path
                     d="M83.0234 74.6016L60.807 57.6908C60.2048 57.2324 59.3686 57.2396 58.7743 57.7084L37.36 74.6016"
                     stroke="#FCFCFC"
-                    strokeWidth="10"
+                    strokeWidth="7"
                     strokeLinecap="round"
                     className="aNiGpCen_1"
                 ></path>
                 <path
                     d="M83.0234 62.1016L60.807 45.1908C60.2048 44.7324 59.3686 44.7396 58.7743 45.2084L37.36 62.1016"
                     stroke="#FCFCFC"
-                    strokeWidth="10"
+                    strokeWidth="7"
                     strokeLinecap="round"
                 ></path>
             </svg>
