@@ -90,7 +90,7 @@ const Contact = () => {
             </div>
             <div className="mt-10">
               <label htmlFor="messaggio" className="block font-bold mb-2">  Messaggio </label>
-              <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button bg-white placeholder:text-black text-black relative" value={formData.messaggio} onChange={handleChange} />
+              <textarea id="messaggio" name="messaggio" placeholder="Messaggio" className="w-full px-4 py-2 rounded-[8px] h-[240px] focus:outline-none shadow-common-button resize-none bg-white placeholder:text-black text-black relative" value={formData.messaggio} onChange={handleChange} />
               {errors.messaggio && <p className="text-red-600 text-sm mt-1 absolute">{errors.messaggio}</p>}
             </div>
             <div className="flex justify-center mt-10">

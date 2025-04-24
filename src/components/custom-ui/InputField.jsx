@@ -1,7 +1,7 @@
 const InputField = ({ label, name, type = "text", placeholder,  value,  onChange, myClass}) => {
     return (
         <div>
-            <label htmlFor={name} className="block text-xl font-bold mb-2">
+            <label htmlFor={name} className="block text-xl font-bold mb-2 text-dark-grey">
                 {label}
             </label>
             <input
