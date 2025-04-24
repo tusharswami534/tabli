@@ -21,12 +21,12 @@ const Nav = () => {
     <div className='w-full pt-10 px-4'>
       <div className='container max-w-[1600px] mx-auto'>
         <div className='w-full flex justify-between items-center'>
-          <Link href="/">
+          <Link scroll={false} href="/">
             <Icons className={` transition-all duration-300 ${path !== '/' && 'fill-dark-grey'}`} icon='logo' />
           </Link>
           <div className={`flex items-center max-md:fixed max-md:w-full max-md:h-full max-md:justify-center max-md:top-0  max-md:flex-col max-md:z-10 max-md:transition-all max-md:duration-300 gap-6 ${open ? 'left-0' : 'left-full'} ${path === '/' ? 'max-md:bg-dark-blue' : 'max-md:bg-yellow'}`}>
             {NavList.map((item, index) => (
-              <Link onClick={() => setOpen(false)} className={`font-bold italic transition-all duration-300 max-md:text-xl leading-131 ${path === '/' ? 'text-white hover:text-yellow' : 'text-dark-grey hover:text-dark-blue'}`} href={item.link} key={index}>
+              <Link scroll={false} onClick={() => setOpen(false)} className={`font-bold italic transition-all duration-300 max-md:text-xl leading-131 ${path === '/' ? 'text-white hover:text-yellow' : 'text-dark-grey hover:text-dark-blue'}`} href={item.link} key={index}>
                 {item.title}
               </Link>
             ))}

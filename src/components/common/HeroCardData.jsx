@@ -12,7 +12,7 @@ import Icons from "./icons";
 const HeroCardData = () => {
     const path = usePathname();
     return (
-        <div id="cosa-potrai" className={` !z-0 relative ${path === '/' ? 'pt-20 z-10 px-2.5 max-xl:pt-16 max-lg:pt-14 max-md:pt-12 pb-[94px] max-lg:pb-20 max-sm:pb-[106px] relative' : 'pb-[250px] max-sm:pb-[190px] px-4 pt-24 max-sm:pt-20'}`}>
+        <div id="cosa-potrai" className={` !z-0 overflow-hidden relative ${path === '/' ? 'pt-20 z-10 px-2.5 max-xl:pt-16 max-lg:pt-14 max-md:pt-12 pb-[94px] max-lg:pb-20 max-sm:pb-[106px] relative' : 'pb-[250px] max-sm:pb-[190px] px-4 pt-24 max-sm:pt-20'}`}>
             {path === "/" && <>
                 <span className=" absolute top-[-7%] sm:hidden w-full left-0">
                     <Icons icon='comeSmVector' />
