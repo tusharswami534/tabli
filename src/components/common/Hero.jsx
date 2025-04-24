@@ -27,18 +27,18 @@ const Hero = () => {
           <Icons icon='downArrow' className={`${path !== '/' && '!fill-dark-blue'}`} />
         </Link>
         <div className='container lg:px-4 max-w-[1632px] mx-auto'>
-          <div className='flex items-center gap-5 max-lg:gap-0 max-lg:flex-col justify-between'>
-            <div className='flex flex-col max-w-[726px] max-lg:px-4 w-full lg:w-6/12'>
-              <h1 className={`text-80 max-xl:text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-40 max-lg:text-center font-black italic leading-131 ${path === '/' ? 'text-white hero-text ' : 'text-dark-grey'}`}>{path === '/' ? ' Tabli sta arrivando!' : 'Valorizza la tua attività con Tabli'}</h1>
-              <Paragraph paragraphText={path === '/' ? 'Stiamo per rivoluzionare il modo in cui acquisti prodotti e servizi nei tuoi luoghi preferiti.' : 'Tabli è progettato per supportare ogni tipo di attività locale - dal bar all’hotel, dal lido alla piccola bottega - offrendo uno strumento semplice, versatile e pronto all’uso.'} className={`sm:mb-2 max-lg:text-center ${path !== '/' && '!text-dark-grey max-[400px]:max-w-[345px] max-sm:py-4'}`} />
-              <Paragraph paragraphText={path === '/' ? 'Con Tabli, potrai consultare l’offerta, ordinare e pagare direttamente dal tuo smartphone, in totale autonomia e senza attese.' : 'Permetti ai tuoi clienti di consultare i tuoi prodotti e servizi, ordinare o prenotare in autonomia, migliorando l’esperienza d’acquisto senza rivoluzionare la tua routine lavorativa.'} className={`max-sm:hidden max-lg:text-center ${path !== '/' && '!text-dark-grey max-[400px]:max-w-[345px] max-sm:!flex'}`} />
-              <div className='flex gap-4 mt-10 max-sm:flex-col max-lg:items-center max-lg:justify-center'>
-                <CustomButton buttonName={'Come Funziona'} className={`max-w-[160px] leading-119 max-sm:max-w-[280px] w-full hover:!bg-dark-grey hover:!text-white ${path !== '/' && '!text-white !bg-dark-blue'}`} />
-                <CustomButton buttonName={'Contatti'} className={`max-w-[160px] leading-119 max-sm:max-w-[280px] w-full border border-solid !text-dark-blue !bg-white ${path === '/' ? '!border-dark-blue hover:!text-white hover:!bg-dark-grey' : '!border-dark-blue hover:!bg-dark-grey hover:!text-white'}`} />
+          <div className='flex items-center gap-5 max-lg:gap-0 max-[1100px]:flex-col justify-between'>
+            <div className='flex flex-col max-w-[726px] max-lg:px-4 w-full min-[1100px]:w-6/12'>
+              <h1 className={`text-80 max-xl:text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-40 max-[1100px]:text-center font-black italic leading-131 ${path === '/' ? 'text-white max-[1100px]:text-center hero-text ' : 'text-dark-grey'}`}>{path === '/' ? ' Tabli sta arrivando!' : 'Valorizza la tua attività con Tabli'}</h1>
+              <Paragraph paragraphText={path === '/' ? 'Stiamo per rivoluzionare il modo in cui acquisti prodotti e servizi nei tuoi luoghi preferiti.' : 'Tabli è progettato per supportare ogni tipo di attività locale - dal bar all’hotel, dal lido alla piccola bottega - offrendo uno strumento semplice, versatile e pronto all’uso.'} className={`sm:mb-2  max-[1100px]:text-center ${path !== '/' && '!text-dark-grey max-[400px]:max-w-[345px] max-sm:py-4'}`} />
+              <Paragraph paragraphText={path === '/' ? 'Con Tabli, potrai consultare l’offerta, ordinare e pagare direttamente dal tuo smartphone, in totale autonomia e senza attese.' : 'Permetti ai tuoi clienti di consultare i tuoi prodotti e servizi, ordinare o prenotare in autonomia, migliorando l’esperienza d’acquisto senza rivoluzionare la tua routine lavorativa.'} className={`max-sm:hidden max-[1100px]:text-center ${path !== '/' && '!text-dark-grey max-[400px]:max-w-[345px] max-sm:!flex'}`} />
+              <div className='flex gap-4 mt-10 max-sm:flex-col max-[1100px]:items-center max-[1100px]:justify-center'>
+                <CustomButton buttonName={'Come Funziona'} className={`max-w-[160px] whitespace-nowrap leading-119 max-sm:max-w-[280px] w-full hover:!bg-dark-grey hover:!text-white ${path !== '/' && '!text-white !bg-dark-blue'}`} />
+                <CustomButton buttonName={'Contatti'} className={`max-w-[160px] whitespace-nowrap leading-119 max-sm:max-w-[280px] w-full border border-solid !text-dark-blue !bg-white ${path === '/' ? '!border-dark-blue hover:!text-white hover:!bg-dark-grey' : '!border-dark-blue hover:!bg-dark-grey hover:!text-white'}`} />
               </div>
             </div>
-            <div className="w-full min-[1025px]:w-6/12 max-lg:mt-20">
-              <div className="max-w-[700px] max-lg:mx-auto ml-auto">
+            <div className="w-full min-[1100px]:w-6/12 max-lg:mt-20">
+              <div className="max-w-[700px] max-[1100px]:mx-auto ml-auto">
                 <Swiper
                   slidesPerView={2.5}
                   spaceBetween={30}

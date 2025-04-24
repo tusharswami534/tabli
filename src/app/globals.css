@@ -89,22 +89,12 @@
   text-shadow: 2px 2px 0px #00000029;
 }
 
+
 /* Hero Swiper */
 
 
 .hero-slider .swiper-slide-active img {
   transform: scale(1.43);
-}
-
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
 }
 
 @media (max-width: 1399.98px) {
