@@ -33,10 +33,7 @@ const RastaTabli = () => {
 
             setTimeLeft({ days, hours, minutes });
         }, 1000);
-
         return () => clearInterval(interval);
-
-
     }, []);
 
     const sendEmail = (e) => {
@@ -46,11 +43,9 @@ const RastaTabli = () => {
             setError(true);
             return;
         }
-
         setError(false);
-
-        emailjs.sendForm('service_ct3vbis', 'template_9glzkno', form.current, {
-            publicKey: 'aKxsD9MpKuUVpMSgP',
+        emailjs.sendForm('service_225sbpv', 'template_mfgmjof', form.current, {
+            publicKey: 'yMfLmnJOVdFosmZqu',
         }).then(
             () => {
                 console.log('SUCCESS!');
@@ -59,6 +54,8 @@ const RastaTabli = () => {
                     text: "La tua email è stata registrata correttamente.",
                     icon: "success"
                 });
+                form.current.reset();
+                setEmail('');
             },
             (error) => {
                 console.log('FAILED...', error.text);
@@ -98,7 +95,7 @@ const RastaTabli = () => {
                             </div>
                         ))}
                     </div>
-                    <form ref={form} onSubmit={sendEmail} className="space-y-2 max-w-[345px] mx-auto">
+                    <form noValidate ref={form} onSubmit={sendEmail} className="space-y-2 max-w-[345px] mx-auto">
                         <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold relative"><span className='relative z-10'>Email</span> <span className="absolute top-0.5 left-[1px] z-0 text-teal-900 font-extrabold opacity-30">
                             Email</span> </label>
                         <InputField placeholder="Inserisci la tua Email" onChange={(e) => {
@@ -117,5 +114,4 @@ const RastaTabli = () => {
         </div>
     )
 }
-
 export default RastaTabli
