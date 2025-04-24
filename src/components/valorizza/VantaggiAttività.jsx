@@ -14,7 +14,7 @@ const VantaggiAttività = () => {
             <div className="max-w-[1408px] mx-auto px-6">
                 <Heading headingText="Vantggi per le tau Attivita" className="!text-center max-lg:!text-40 !leading-normal !text-yellow max-sm:!pb-4 !drop-shadow-heading" />
                 <div className="flex max-lg:flex-col lg:justify-between relative z-30 max-lg:justify-center md:pt-10 2xl:pb-[200px] md:pb-[140px] pb-20 max-w-[1408px] mx-auto  max-sm:pb-14">
-                    <Image className='xl:max-w-[750px] max-w-[540px] max-lg:mx-auto w-full xl:h-[534px] 2xl:-ml-[67px]' src="/assets/images/webp/attivita-image.webp" alt="attivita" width={800.6} height={534} />
+                    <Image className='xl:max-w-[750px] max-w-[540px] max-lg:mx-auto pointer-events-none w-full xl:h-[534px] 2xl:-ml-[67px]' src="/assets/images/webp/attivita-image.webp" alt="attivita" width={800.6} height={534} />
                     <div className='xl:pt-[92px] md:pt-10 pt-4'>
                         <h3 className='lg:max-w-[384px] max-w-none text-32 text-white font-black xl:pb-10 pb-6 max-sm:text-center leading-130 italic'>
                             Più tempo per gestire, meno tempo perso

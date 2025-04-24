@@ -14,7 +14,7 @@ const FunzionalitaPrincipali = () => {
           {FUNZIONALITA_LIST.map((feature, index) => (
             <div key={index} className='rounded-[20px] bg-white p-6 relative md:min-h-[267px] min-h-[260px] transition-all duration-300 hover:shadow-none shadow-xl hover:z-10'>
               <Image
-                className={`${feature.imgStyle} size-[160px]`}
+                className={`${feature.imgStyle} size-[160px] pointer-events-none`}
                 src={feature.icon}
                 alt='feature-icon'
                 width={160}
