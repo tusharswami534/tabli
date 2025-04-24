@@ -43,7 +43,7 @@ const RastaTabli = () => {
             <div className="container max-w-[1200px] mx-auto md:px-4 relative z-30">
                 <div className="text-white text-center p-6 rounded-lg max-w-[670px] max-xl:mx-auto ml-auto">
                     <Heading headingText="Resta aggiornato su Tabli, il lancio è dietro l’angolo!" className="!text-white !max-w-[622px] !leading-130" />
-                    <div className="flex justify-center gap-2 pb-10 pt-8">
+                    <div className="flex justify-center gap-2 pb-10 md:pt-8 pt-4">
                         {[{ label: 'Giorni', value: timeLeft.days },
                         { label: 'Ore', value: timeLeft.hours },
                         { label: 'Minuti', value: timeLeft.minutes },

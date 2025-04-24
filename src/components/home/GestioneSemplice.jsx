@@ -12,7 +12,8 @@ const GestioneSemplice = () => {
         <div className="max-sm:px-5">
           <Image className='absolute left-[-35%] max-lg:hidden xl:left-[-20%] 2xl:left-0 top-[150px] xl:top-[200px] 2xl:top-[280px] pointer-events-none' height={759} width={1030} src={'/assets/images/png/gestione-side-line.png'} alt='side line' />
           <div className="lg:max-w-[526px] max-w-[350px] max-sm:max-w-[313px]">
-            <p className='lg:text-40 text-32 max-w-[500px] font-black text-white leading-119 pb-4 lg:pb-11'>Gestione Semplice, Servizio Efficiente</p>
+            <p className='lg:text-40 text-32 max-w-[500px] font-black text-white leading-119 pb-4 lg:pb-11 relative'><span className='relative z-10'>Gestione Semplice, Servizio Efficiente</span>  <span className="absolute top-1 left-1 z-1 text-teal-900 font-extrabold opacity-30">
+            Gestione Semplice, Servizio Efficiente  </span>  </p>
             <p className='text-32 font-black leading-100 text-white max-lg:hidden'>Un Servizio Fluido e Intuitivo</p>
             <Paragraph className='pt-4 !font-medium' paragraphText={'Tabli è la piattaforma pensata per semplificare la gestione delle attività, indipendentemente dalla loro dimensione o settore.'} />
             <Paragraph className='pt-4 !font-medium' paragraphText={'Aiuta a organizzare ordini, migliorare l’esperienza dei clienti e ottimizzare i tempi, rendendo ogni fase del lavoro più fluida ed efficiente.'} />
