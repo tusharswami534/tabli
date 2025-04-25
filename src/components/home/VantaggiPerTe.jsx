@@ -57,11 +57,12 @@ const VantaggiPerTe = () => {
             }}
             className="flex items-center justify-center max-w-[1320px] mx-auto py-[89px] pb-[40px]">
             {BENEFITS_LIST.map((item, index) => (
-              <SwiperSlide key={index} className="bg-white group rounded-3xl transition-all duration-300 overflow-hidden max-w-[300px] w-full">
+              <SwiperSlide key={index} className="bg-white group relative group rounded-3xl transition-all duration-300 overflow-hidden max-w-[300px] w-full">
                 <Image className='w-[300px] pointer-events-none max-md:h-[300px]' height={300} width={240} src={item.image} alt='benefits' />
-                <div className="flex flex-col py-6 px-6 md:px-4 gap-2">
+                <div className="flex flex-col py-6 px-6 md:px-4 group-hover:translate-y-[-100px] bg-white group-hover:overflow-visible overflow-hidden transition-all duration-300">
                   <p className='text-dark-blue font-bold leading-119 text-xl'>{item.title}</p>
-                  <Paragraph className='!text-light-gray !leading-[130%]' paragraphText={item.description} />
+                  <Paragraph className='!text-light-gray !leading-[130%] pt-2' paragraphText={item.description} />
+                  <Paragraph className='!text-light-gray !leading-[130%] h-0 group-hover:opacity-100 opacity-0 transition-all duration-500' paragraphText={item.descriptionTwo} />
                 </div>
               </SwiperSlide>
             ))}

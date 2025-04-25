@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react'; import Image from 'next/image'
-import Heading from '../custom-ui/Heading';
 import InputField from '../custom-ui/InputField';
 import CustomButton from '../custom-ui/CustomButton';
 import emailjs from '@emailjs/browser';
@@ -98,13 +97,15 @@ const RastaTabli = () => {
                     <form noValidate ref={form} onSubmit={sendEmail} className="space-y-2 max-w-[345px] mx-auto">
                         <label htmlFor="email" className="block text-left text-xl shadow-2xl font-bold relative"><span className='relative z-10'>Email</span> <span className="absolute top-0.5 left-[1px] z-0 text-teal-900 font-extrabold opacity-30">
                             Email</span> </label>
-                        <InputField placeholder="Inserisci la tua Email" onChange={(e) => {
-                            const value = e.target.value;
-                            setEmail(value);
-                            if (EmailRegex.test(value)) { setError(false); }
-                        }} type='email' myClass="!max-w-[345px] !mr-auto !flex !justify-start !text-dark-grey placeholder:!text-dark-grey" />
-                        <p className='text-red-500 text-left'>{error && 'Inserisci un indirizzo email valido'}</p>
-                        <CustomButton buttonName="  ISCRIVITI ORA" className="md:!w-[344px] w-full h-[45px] !flex !justify-center !items-center !mt-6" />
+                        <div className="relative">
+                            <InputField placeholder="Inserisci la tua Email" onChange={(e) => {
+                                const value = e.target.value;
+                                setEmail(value);
+                                if (EmailRegex.test(value)) { setError(false); }
+                            }} type='email' myClass="!max-w-[345px] !mr-auto !flex !justify-start !text-dark-grey placeholder:!text-dark-grey" />
+                            <p className='text-red-500 absolute -bottom-[22px] text-sm text-left'>{error && 'Inserisci un indirizzo email valido'}</p>
+                        </div>
+                        <CustomButton buttonName="ISCRIVITI ORA" className="md:!w-[344px] w-full h-[45px] !flex !justify-center !items-center !mt-6" />
                     </form>
                 </div>
             </div>
