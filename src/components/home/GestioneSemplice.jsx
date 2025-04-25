@@ -11,7 +11,7 @@ const GestioneSemplice = () => {
       <div className='flex max-md:flex-col-reverse max-sm:pb-[214px] max-xl:pb-16 max-lg:gap-4 max-sm:px-0 max-2xl:px-5 max-w-[1440px] mx-auto items-center justify-between pt-10 md:pt-[110px]'>
         <div className="max-sm:px-5">
           <Image className='absolute left-[-35%] max-lg:hidden xl:left-[-20%] 2xl:left-0 top-[150px] xl:top-[200px] 2xl:top-[280px] pointer-events-none' height={759} width={1030} src={'/assets/images/png/gestione-side-line.png'} alt='side line' />
-          <div className="lg:max-w-[526px] max-w-[350px] max-sm:max-w-[313px]">
+          <div className="lg:max-w-[526px] md:max-w-[350px] max-sm:max-w-[313px]">
             <p className='lg:text-40 text-32 max-w-[500px] font-black text-white leading-119 pb-4 lg:pb-11 relative'><span className='relative z-10'>Gestione Semplice, Servizio Efficiente</span>  <span className="absolute top-1 left-1 z-1 text-teal-900 font-extrabold opacity-30">
             Gestione Semplice, Servizio Efficiente  </span>  </p>
             <p className='text-32 font-black leading-100 text-white max-lg:hidden'>Un Servizio Fluido e Intuitivo</p>
