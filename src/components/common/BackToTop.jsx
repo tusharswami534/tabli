@@ -23,7 +23,7 @@ const BackToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`size-10 md:size-12 cursor-pointer rounded-full border-2 border-white hover:bg-black duration-300 hover:scale-[1.05] bg-green shadow-header-btn fixed min-[1921px]:right-[calc((100vw-1880px)/2)] right-3 flex items-center justify-center group z-30 ${
+      className={`size-10 md:size-12 cursor-pointer rounded-full border-2 border-white bg-black duration-300 hover:scale-[1.05] fixed min-[1921px]:right-[calc((100vw-1880px)/2)] right-3 flex items-center justify-center group z-30 ${
         isVisible ? "scale-100 bottom-4" : "-bottom-16 scale-75"
       }`}
       >

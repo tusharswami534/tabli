@@ -7,7 +7,7 @@ const VantaggiAttività = () => {
     return (
         <div className='bg-dark-blue relative pt-4 sm:pt-10 2xl:pt-4 '>
             <Image src="/assets/images/png/attivita-left-layer.png" alt='tabli name' width={685} height={1258} className=' absolute z-30 2xl:max-w-[680px] max-w-[500px] 2xl:min-h-[1250px] xl:block !overflow-hidden hidden min-h-[900px] left-0' />
-            <Image src="/assets/images/png/attivita-right-layer.png" alt='tabli name' width={920} height={1258} className='min-[1720px]:!max-w-[920px] 2xl:max-w-[770px] max-w-[670px] xl:block hidden !overflow-hidden min-h-[950px] h-auto absolute z-20 right-0 top-[19%]' />
+            <Image src="/assets/images/png/attivita-right-layer.png" alt='tabli name' width={920} height={1258} className='min-[1720px]:!max-w-[920px] 2xl:max-w-[770px] xl:max-w-[620px] xl:block hidden !overflow-hidden min-h-[950px] h-auto absolute z-20 right-0 top-[19%]' />
             <Image src="/assets/images/webp/tabli-name.webp" alt='tabli name' width={585} height={158} className=' absolute  lg:top-[-23%] md:top-[-19%] top-[-11%] left-1/2 -translate-x-1/2 max-w-[585px] mx-auto w-full max-md:w-[292px]' />
             <Image className='absolute lg:top-[-16%] sm:-top-[13%] -top-[7%] sm:h-[152px] h-[68px] w-full' src="/assets/images/png/attivita-top-layer.png" alt='top-layer' width={1920} height={152} />
             <Image className='absolute lg:-bottom-[15%] z-10 md:-bottom-[12%] -bottom-[8%] w-full md:h-[152px] h-[88px]' src="/assets/images/webp/attivita-bottom-layer.webp" alt='bottom-layer' width={1920} height={152} />

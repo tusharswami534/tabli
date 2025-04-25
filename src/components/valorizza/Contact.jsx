@@ -10,7 +10,7 @@ const Contact = () => {
 
   const [formData, setFormData] = useState({ nome: '', cognome: '', telefono: '', email: '', messaggio: '' });
   const [errors, setErrors] = useState({ nome: '', cognome: '', telefono: '', email: '', messaggio: '' });
-  const phoneRegex = /^[0-9]{10,15}$/;
+  const phoneRegex = /^[0-9]{10}$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const handleChange = (e) => {
     const { name, value } = e.target;

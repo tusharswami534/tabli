@@ -25,11 +25,21 @@ const Nav = () => {
             <Icons className={` transition-all duration-300 ${path !== '/' && 'fill-dark-grey'}`} icon='logo' />
           </Link>
           <div className={`flex items-center max-md:fixed max-md:w-full max-md:h-full max-md:justify-center max-md:top-0  max-md:flex-col max-md:z-10 max-md:transition-all max-md:duration-300 gap-6 ${open ? 'left-0' : 'left-full'} ${path === '/' ? 'max-md:bg-dark-blue' : 'max-md:bg-yellow'}`}>
-            {NavList.map((item, index) => (
-              <Link scroll={false} onClick={() => setOpen(false)} className={`font-bold italic transition-all duration-300 max-md:text-xl leading-131 ${path === '/' ? 'text-white hover:text-yellow' : 'text-dark-grey hover:text-dark-blue'}`} href={item.link} key={index}>
-                {item.title}
-              </Link>
-            ))}
+            {NavList.map((item, index) => {
+              const isActive = path === item.link;
+              return (
+                <Link
+                  scroll={false}
+                  onClick={() => setOpen(false)}
+                  className={`font-bold italic transition-all duration-300 max-md:text-2xl leading-131 
+        ${isActive ? 'text-dark-blue' : path === '/' ? 'text-white hover:text-yellow' : 'text-dark-grey hover:text-dark-blue'}`}
+                  href={item.link}
+                  key={index}
+                >
+                  {item.title}
+                </Link>
+              );
+            })}
           </div>
           <button onClick={() => setOpen(!open)} className={`w-[46px] relative z-20 hidden max-md:flex h-[45px] cursor-pointer overflow-hidden border-2 border-solid gap-1 items-center justify-center flex-col rounded-lg ${path === '/' ? 'border-yellow' : 'border-dark-blue'}`}>
             <span className={`w-6 h-0.5 flex rounded-full transition-all duration-300 ${open && 'translate-x-20'} ${path === '/' ? 'bg-yellow' : 'bg-dark-blue'}`}></span>

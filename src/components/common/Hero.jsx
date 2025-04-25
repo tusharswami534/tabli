@@ -18,7 +18,7 @@ const Hero = () => {
   const path = usePathname()
   return (
     <div className={`pb-[72px] max-md:pb-0 relative ${path === '/' ? 'bg-dark-blue' : '!bg-yellow'}`}>
-      <span className=" absolute right-0 max-lg:hidden pointer-events-none top-[186px]"><Icons className={path === '/' ? 'stroke-yellow':  'stroke-dark-blue'} icon='heroRightVector' /></span>
+      <span className=" absolute right-0 z-[1] max-lg:hidden pointer-events-none top-[186px]"><Icons className={path === '/' ? 'stroke-yellow':  'stroke-dark-blue'} icon='heroRightVector' /></span>
       <span className=" absolute left-0 max-lg:hidden pointer-events-none top-[70%] -translate-y-1/2"><Icons className={path === '/' ? 'stroke-yellow':  'stroke-dark-blue'} icon='heroLeftVector' /></span>
       <span className=" absolute left-0 lg:hidden pointer-events-none top-[88px] w-full"><Icons className={'w-full'} icon='heroSmVector' /></span>
       <Nav />
@@ -28,7 +28,7 @@ const Hero = () => {
         </Link>
         <div className='container lg:px-4 max-w-[1632px] mx-auto'>
           <div className='flex items-center gap-5 max-lg:gap-0 max-[1100px]:flex-col justify-between'>
-            <div className='flex flex-col max-w-[726px] max-lg:px-4 w-full min-[1100px]:w-6/12'>
+            <div className='flex flex-col max-w-[726px] max-lg:px-4 relative z-[2] w-full min-[1100px]:w-6/12'>
               <h1 className={`text-80 max-xl:text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-40 max-[1100px]:text-center font-black italic leading-131 ${path === '/' ? 'text-white max-[1100px]:text-center hero-text ' : 'text-dark-grey'}`}>{path === '/' ? ' Tabli sta arrivando!' : 'Valorizza la tua attività con Tabli'}</h1>
               <Paragraph paragraphText={path === '/' ? 'Stiamo per rivoluzionare il modo in cui acquisti prodotti e servizi nei tuoi luoghi preferiti.' : 'Tabli è progettato per supportare ogni tipo di attività locale - dal bar all’hotel, dal lido alla piccola bottega - offrendo uno strumento semplice, versatile e pronto all’uso.'} className={`sm:mb-2  max-[1100px]:text-center ${path !== '/' && '!text-dark-grey max-[400px]:max-w-[345px] max-sm:py-4'}`} />
               <Paragraph paragraphText={path === '/' ? 'Con Tabli, potrai consultare l’offerta, ordinare e pagare direttamente dal tuo smartphone, in totale autonomia e senza attese.' : 'Permetti ai tuoi clienti di consultare i tuoi prodotti e servizi, ordinare o prenotare in autonomia, migliorando l’esperienza d’acquisto senza rivoluzionare la tua routine lavorativa.'} className={`max-sm:hidden max-[1100px]:text-center ${path !== '/' && '!text-dark-grey max-[400px]:max-w-[345px] max-sm:!flex'}`} />
