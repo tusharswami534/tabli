@@ -76,7 +76,7 @@ const RastaTabli = () => {
                 <Image src="/assets/images/png/phone-handing.png" alt='phone-handing' width={678} height={600} className='2xl:w-[678px] lg:w-[500px] md:w-[400px] w-[220px] max-md:h-[230px] object-cover' />
             </div>
             <div className='absolute pointer-events-none right-[-15%] top-20 md:top-[-150px] xl:-top-[50px] z-10'>
-                <Image src="/assets/images/png/food-plate.png" alt='phone-handing' width={591} height={600} className='2xl:w-[591px] food-plate object-contain h-[600px] md:w-[400px] w-[180px] max-md:h-[167px] xl:w-[500px]' />
+                <Image src="/assets/images/png/food-plate.png" alt='phone-handing' width={591} height={600} className='2xl:w-[640px] food-plate object-contain h-[650px] md:w-[400px] w-[180px] max-md:h-[167px] xl:w-[500px]' />
             </div>
             <div className="container max-w-[1200px] mx-auto md:px-4 relative z-30">
                 <div className="text-white text-center p-6 rounded-lg max-w-[670px] max-xl:mx-auto ml-auto">
