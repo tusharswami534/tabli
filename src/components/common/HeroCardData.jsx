@@ -30,7 +30,7 @@ const HeroCardData = () => {
                 <div
                     className={` grid  ${path === "/"
                         ? "grid-cols-3 max-md:grid-cols-2 gap-10 max-lg:px-1.5 max-xl:gap-8 max-lg:gap-7 max-md:gap-6 max-sm:gap-[13px] w-full max-w-[1070px]"
-                        : "grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 justify-center gap-[15px] w-full"
+                        : "grid-cols-4 max-xl:grid-cols-2 max-md:grid-cols-2 max-sm:grid-cols-1 justify-center gap-[15px] w-full"
                         }`}
                 >
                     {path === "/" ? (
