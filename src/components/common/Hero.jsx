@@ -20,9 +20,9 @@ const Hero = () => {
     <div className={`pb-[72px] max-md:pb-0 relative ${path === '/' ? 'bg-dark-blue' : '!bg-yellow'}`}>
       <Nav />
       <div className="overflow-hidden relative">
-        <span className=" absolute right-0 z-[1] max-lg:hidden pointer-events-none max-xl:!right-[-28%] top-[112px]"><Icons className={path === '/' ? 'stroke-yellow' : 'stroke-dark-blue'} icon='heroRightVector' /></span>
-        <span className=" absolute left-0 max-lg:hidden pointer-events-none top-[70%] max-xl:!left-[-28%] -translate-y-1/2"><Icons className={path === '/' ? 'stroke-yellow' : 'stroke-dark-blue'} icon='heroLeftVector' /></span>
-        <span className=" absolute left-0 lg:hidden pointer-events-none top-[88px] w-full"><Icons className={'w-full'} icon='heroSmVector' /></span>
+        <span className=" absolute right-0 z-[1] max-[1100px]:hidden pointer-events-none max-2xl:right-[-10%] max-xl:!right-[-28%] top-[112px]"><Icons className={path === '/' ? 'stroke-yellow' : 'stroke-dark-blue'} icon='heroRightVector' /></span>
+        <span className=" absolute left-0 max-[1100px]:hidden pointer-events-none top-[70%] max-xl:!left-[-28%] -translate-y-1/2"><Icons className={path === '/' ? 'stroke-yellow' : 'stroke-dark-blue'} icon='heroLeftVector' /></span>
+        <span className=" absolute left-0 min-[1100px]:hidden pointer-events-none top-[88px] w-full"><Icons className={'w-full'} icon='heroSmVector' /></span>
         <div className='flex w-full relative pt-[62px] pb-[134px] max-md:pt-20 max-md:pb-0'>
           <Link className='absolute max-md:hidden bottom-4 left-1/2 -translate-x-1/2' href='#cosa-potrai'>
             <Icons icon='downArrow' className={`${path !== '/' && '!fill-dark-blue'}`} />
