@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState } from "react";
+import React, {  useState } from "react";
 import Nav from './Nav'
 import Paragraph from '../custom-ui/Paragraph'
 import CustomButton from '../custom-ui/CustomButton'
@@ -16,6 +16,7 @@ import { Autoplay } from 'swiper/modules';
 
 const Hero = () => {
   const path = usePathname()
+  const [activeButton, setActiveButton] = useState('come-funziona');
   return (
     <div className={`pb-[72px] max-md:pb-0 relative ${path === '/' ? 'bg-dark-blue' : '!bg-yellow'}`}>
       <Nav />
@@ -34,8 +35,8 @@ const Hero = () => {
                 <Paragraph paragraphText={path === '/' ? 'Stiamo per rivoluzionare il modo in cui acquisti prodotti e servizi nei tuoi luoghi preferiti.' : 'Tabli è progettato per supportare ogni tipo di attività locale - dal bar all’hotel, dal lido alla piccola bottega - offrendo uno strumento semplice, versatile e pronto all’uso.'} className={`sm:mb-2  max-[1100px]:text-center ${path !== '/' && '!text-dark-grey max-[400px]:max-w-[345px] max-sm:py-4'}`} />
                 <Paragraph paragraphText={path === '/' ? 'Con Tabli, potrai consultare l’offerta, ordinare e pagare direttamente dal tuo smartphone, in totale autonomia e senza attese.' : 'Permetti ai tuoi clienti di consultare i tuoi prodotti e servizi, ordinare o prenotare in autonomia, migliorando l’esperienza d’acquisto senza rivoluzionare la tua routine lavorativa.'} className={`max-sm:hidden max-[1100px]:text-center ${path !== '/' && '!text-dark-grey max-[400px]:max-w-[345px] max-sm:!flex'}`} />
                 <div className='flex gap-4 mt-10 max-sm:flex-col max-[1100px]:items-center max-[1100px]:justify-center'>
-                  <CustomButton buttonName={'Come Funziona'} className={`max-w-[160px] whitespace-nowrap leading-119 max-sm:max-w-[280px] w-full hover:!bg-dark-grey hover:!text-white ${path !== '/' && '!text-white !bg-dark-blue'}`} />
-                  <CustomButton buttonName={'Contatti'} className={`max-w-[160px] whitespace-nowrap leading-119 max-sm:max-w-[280px] w-full border border-solid !text-dark-blue !bg-white ${path === '/' ? '!border-dark-blue hover:!text-white hover:!bg-dark-grey' : '!border-dark-blue hover:!bg-dark-grey hover:!text-white'}`} />
+                  <CustomButton customOnClick={() => setActiveButton('come-funziona')} buttonName={'Come Funziona'} className={`max-w-[160px] whitespace-nowrap leading-119 max-sm:max-w-[280px] w-full hover:!bg-dark-grey border border-solid border-dark-blue hover:!text-white ${path !== '/' && '!text-white !bg-dark-blue'} ${activeButton === 'come-funziona' && '!text-white !border-white !bg-dark-blue'}`} />
+                  <CustomButton customOnClick={() => setActiveButton('contatti')} buttonName={'Contatti'} className={`max-w-[160px] whitespace-nowrap leading-119 max-sm:max-w-[280px] w-full border border-solid !text-dark-blue bg-white ${path === '/' ? '!border-dark-blue hover:!text-white hover:!bg-dark-grey' : '!border-dark-blue hover:!bg-dark-grey hover:!text-white'} ${activeButton === 'contatti' && '!text-white !border-white !bg-dark-blue'}`} />
                 </div>
               </div>
               <div className="w-full min-[1100px]:w-6/12 max-lg:mt-20">
