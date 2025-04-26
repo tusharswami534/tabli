@@ -5,10 +5,9 @@ import Heading from '../custom-ui/Heading'
 const FunzionalitaPrincipali = () => {
   return (
     <div className='bg-yellow xl:pb-[250px] md:pb-[150px] pb-30 2xl:pt-[260px] md:pt-[130px] pt-[177px] relative'>
-      <Image className='absolute 2xl:top-[16%] min-[1200px]:top-[27%] !overflow-hidden min-[1200px]:h-[830px] h-auto max-2xl:w-full xl:block hidden min-[2000px]:left-[1%]' src="/assets/images/png/Funzionalità-layer.png" alt='top-layer' width={1920} height={152} />
+      <Image className='absolute 2xl:top-[16%] min-[1200px]:top-[27%] !overflow-hidden min-[1200px]:h-[830px] h-auto max-2xl:w-full xl:block hidden left-1/2 -translate-x-1/2' src="/assets/images/png/Funzionalità-layer.png" alt='top-layer' width={1920} height={152} />
       <div className="max-w-[1560px] mx-auto pb-10 px-[26px]">
         <Heading headingText="Funzionalità Principali" className="!text-center !text-dark-grey max-lg:!text-40 !leading-130 !pb-4" />
-
         <h5 className='font-black md:text-32 text-26 text-center !text-dark-grey italic leading-130'>Tutti gli strumenti di cui hai bisogno, in un’unica piattaforma.</h5>
         <div className="flex max-xl:flex-wrap justify-center pt-20 2xl:gap-[27px] min-[1300px]:!gap-5 md:gap-y-14 md:gap-x-10 max-md:gap-[67px] ">
           {FUNZIONALITA_LIST.map((feature, index) => (
